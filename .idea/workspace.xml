@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8b618a4c-12fd-4569-b56e-e2d827122b53" name="Changes" comment="Singup page by default">
+      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2cm53WJhzd3ROIOdDIB3XtSslnH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/nicka/code_repositories/ChatGPT_Azure/nf_flask - 20241112/app.py",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Python"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nicka\code_repositories\ChatGPT_Azure\nf_flask\react_frontend2\src" />
+      <recent name="C:\Users\nicka\code_repositories\ChatGPT_Azure\nf_flask" />
+      <recent name="C:\Users\nicka\code_repositories\ChatGPT_Azure\nf_flask\templates" />
+      <recent name="C:\Users\nicka\code_repositories\ChatGPT_Azure\nf_flask\" />
+      <recent name="C:\Users\nicka\code_repositories\ChatGPT_Azure\nf_flask\react_frontend2" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="ask_strea" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.utils">
+    <configuration name="add_new_listing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="nf_flask" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/add_new_listing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="nf_flask" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.utils" />
+        <item itemvalue="Python.add_new_listing" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b618a4c-12fd-4569-b56e-e2d827122b53" name="Changes" comment="" />
+      <created>1708703715222</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708703715222</updated>
+    </task>
+    <task id="LOCAL-00237" summary="Listing Admin&#10;&#10;azure-storage added">
+      <option name="closed" value="true" />
+      <created>1728408797727</created>
+      <option name="number" value="00237" />
+      <option name="presentableId" value="LOCAL-00237" />
+      <option name="project" value="LOCAL" />
+      <updated>1728408797727</updated>
+    </task>
+    <task id="LOCAL-00238" summary="Listing Admin&#10;&#10;azure-storage added">
+      <option name="closed" value="true" />
+      <created>1728410314759</created>
+      <option name="number" value="00238" />
+      <option name="presentableId" value="LOCAL-00238" />
+      <option name="project" value="LOCAL" />
+      <updated>1728410314759</updated>
+    </task>
+    <task id="LOCAL-00239" summary="Listing Admin&#10;&#10;azure-storage added">
+      <option name="closed" value="true" />
+      <created>1728413915224</created>
+      <option name="number" value="00239" />
+      <option name="presentableId" value="LOCAL-00239" />
+      <option name="project" value="LOCAL" />
+      <updated>1728413915225</updated>
+    </task>
+    <task id="LOCAL-00240" summary="Listing Admin&#10;&#10;azure-storage added">
+      <option name="closed" value="true" />
+      <created>1728416004294</created>
+      <option name="number" value="00240" />
+      <option name="presentableId" value="LOCAL-00240" />
+      <option name="project" value="LOCAL" />
+      <updated>1728416004294</updated>
+    </task>
+    <task id="LOCAL-00241" summary="Formatting and Navigatyion fixes">
+      <option name="closed" value="true" />
+      <created>1728662425982</created>
+      <option name="number" value="00241" />
+      <option name="presentableId" value="LOCAL-00241" />
+      <option name="project" value="LOCAL" />
+      <updated>1728662425983</updated>
+    </task>
+    <task id="LOCAL-00242" summary="Formatting and Navigatyion fixes">
+      <option name="closed" value="true" />
+      <created>1728663006017</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1728663006017</updated>
+    </task>
+    <task id="LOCAL-00243" summary="Formatting and Navigatyion fixes">
+      <option name="closed" value="true" />
+      <created>1728678865471</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1728678865471</updated>
+    </task>
+    <task id="LOCAL-00244" summary="Formatting and Navigatyion fixes">
+      <option name="closed" value="true" />
+      <created>1728680083403</created>
+      <option name="number" value="00244" />
+      <option name="presentableId" value="LOCAL-00244" />
+      <option name="project" value="LOCAL" />
+      <updated>1728680083404</updated>
+    </task>
+    <task id="LOCAL-00245" summary="Formatting and Navigatyion fixes">
+      <option name="closed" value="true" />
+      <created>1728680759415</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1728680759415</updated>
+    </task>
+    <task id="LOCAL-00246" summary="Formatting and Navigatyion fixes">
+      <option name="closed" value="true" />
+      <created>1728944655259</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1728944655259</updated>
+    </task>
+    <task id="LOCAL-00247" summary="Formatting and Navigatyion fixes">
+      <option name="closed" value="true" />
+      <created>1728967082077</created>
+      <option name="number" value="00247" />
+      <option name="presentableId" value="LOCAL-00247" />
+      <option name="project" value="LOCAL" />
+      <updated>1728967082077</updated>
+    </task>
+    <task id="LOCAL-00248" summary="Fixed COVOTOP AND SITE_LOCATION ERRORS.  Also added OWQQ">
+      <option name="closed" value="true" />
+      <created>1728994928841</created>
+      <option name="number" value="00248" />
+      <option name="presentableId" value="LOCAL-00248" />
+      <option name="project" value="LOCAL" />
+      <updated>1728994928841</updated>
+    </task>
+    <task id="LOCAL-00249" summary="Fixed COVOTOP AND SITE_LOCATION ERRORS.  Also added OWQQ">
+      <option name="closed" value="true" />
+      <created>1729027984515</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1729027984515</updated>
+    </task>
+    <task id="LOCAL-00250" summary="Fixed COVOTOP AND SITE_LOCATION ERRORS.  Also added OWQQ">
+      <option name="closed" value="true" />
+      <created>1729172020140</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1729172020140</updated>
+    </task>
+    <task id="LOCAL-00251" summary="Fixed COVOTOP AND SITE_LOCATION ERRORS.  Also added OWQQ">
+      <option name="closed" value="true" />
+      <created>1729370332355</created>
+      <option name="number" value="00251" />
+      <option name="presentableId" value="LOCAL-00251" />
+      <option name="project" value="LOCAL" />
+      <updated>1729370332355</updated>
+    </task>
+    <task id="LOCAL-00252" summary="Fixed COVOTOP AND SITE_LOCATION ERRORS.  Also added OWQQ">
+      <option name="closed" value="true" />
+      <created>1729373894833</created>
+      <option name="number" value="00252" />
+      <option name="presentableId" value="LOCAL-00252" />
+      <option name="project" value="LOCAL" />
+      <updated>1729373894833</updated>
+    </task>
+    <task id="LOCAL-00253" summary="Fixed COVOTOP AND SITE_LOCATION ERRORS.  Also added OWQQ">
+      <option name="closed" value="true" />
+      <created>1729427738899</created>
+      <option name="number" value="00253" />
+      <option name="presentableId" value="LOCAL-00253" />
+      <option name="project" value="LOCAL" />
+      <updated>1729427738899</updated>
+    </task>
+    <task id="LOCAL-00254" summary="Fixed COVOTOP AND SITE_LOCATION ERRORS.  Also added OWQQ">
+      <option name="closed" value="true" />
+      <created>1729687633770</created>
+      <option name="number" value="00254" />
+      <option name="presentableId" value="LOCAL-00254" />
+      <option name="project" value="LOCAL" />
+      <updated>1729687633772</updated>
+    </task>
+    <task id="LOCAL-00255" summary="Fixed COVOTOP AND SITE_LOCATION ERRORS.  Also added OWQQ">
+      <option name="closed" value="true" />
+      <created>1730148015880</created>
+      <option name="number" value="00255" />
+      <option name="presentableId" value="LOCAL-00255" />
+      <option name="project" value="LOCAL" />
+      <updated>1730148015880</updated>
+    </task>
+    <task id="LOCAL-00256" summary="Fixed COVOTOP AND SITE_LOCATION ERRORS.  Also added OWQQ">
+      <option name="closed" value="true" />
+      <created>1730151405043</created>
+      <option name="number" value="00256" />
+      <option name="presentableId" value="LOCAL-00256" />
+      <option name="project" value="LOCAL" />
+      <updated>1730151405043</updated>
+    </task>
+    <task id="LOCAL-00257" summary="Fixed Site Images">
+      <option name="closed" value="true" />
+      <created>1730202697484</created>
+      <option name="number" value="00257" />
+      <option name="presentableId" value="LOCAL-00257" />
+      <option name="project" value="LOCAL" />
+      <updated>1730202697484</updated>
+    </task>
+    <task id="LOCAL-00258" summary="Major Update.  Fixed Admin site mostly and Bin and Image games">
+      <option name="closed" value="true" />
+      <created>1730561005244</created>
+      <option name="number" value="00258" />
+      <option name="presentableId" value="LOCAL-00258" />
+      <option name="project" value="LOCAL" />
+      <updated>1730561005245</updated>
+    </task>
+    <task id="LOCAL-00259" summary="Major Update.  Fixed Admin site mostly and Bin and Image games">
+      <option name="closed" value="true" />
+      <created>1730561560022</created>
+      <option name="number" value="00259" />
+      <option name="presentableId" value="LOCAL-00259" />
+      <option name="project" value="LOCAL" />
+      <updated>1730561560022</updated>
+    </task>
+    <task id="LOCAL-00260" summary="Converted site to use Json structured data">
+      <option name="closed" value="true" />
+      <created>1731421481438</created>
+      <option name="number" value="00260" />
+      <option name="presentableId" value="LOCAL-00260" />
+      <option name="project" value="LOCAL" />
+      <updated>1731421481438</updated>
+    </task>
+    <task id="LOCAL-00261" summary="Updated Admin Listing Query">
+      <option name="closed" value="true" />
+      <created>1731588843327</created>
+      <option name="number" value="00261" />
+      <option name="presentableId" value="LOCAL-00261" />
+      <option name="project" value="LOCAL" />
+      <updated>1731588843327</updated>
+    </task>
+    <task id="LOCAL-00262" summary="Remove image context">
+      <option name="closed" value="true" />
+      <created>1731676444408</created>
+      <option name="number" value="00262" />
+      <option name="presentableId" value="LOCAL-00262" />
+      <option name="project" value="LOCAL" />
+      <updated>1731676444408</updated>
+    </task>
+    <task id="LOCAL-00263" summary="Moved Json processing pre-display.  User can not see them">
+      <option name="closed" value="true" />
+      <created>1731862389171</created>
+      <option name="number" value="00263" />
+      <option name="presentableId" value="LOCAL-00263" />
+      <option name="project" value="LOCAL" />
+      <updated>1731862389171</updated>
+    </task>
+    <task id="LOCAL-00264" summary="Fixed strange synch issue with buffer">
+      <option name="closed" value="true" />
+      <created>1732018693670</created>
+      <option name="number" value="00264" />
+      <option name="presentableId" value="LOCAL-00264" />
+      <option name="project" value="LOCAL" />
+      <updated>1732018693670</updated>
+    </task>
+    <task id="LOCAL-00265" summary="Fixed strange synch issue with buffer">
+      <option name="closed" value="true" />
+      <created>1732022520947</created>
+      <option name="number" value="00265" />
+      <option name="presentableId" value="LOCAL-00265" />
+      <option name="project" value="LOCAL" />
+      <updated>1732022520947</updated>
+    </task>
+    <task id="LOCAL-00266" summary="Fixed Neighborhood Link">
+      <option name="closed" value="true" />
+      <created>1732031719659</created>
+      <option name="number" value="00266" />
+      <option name="presentableId" value="LOCAL-00266" />
+      <option name="project" value="LOCAL" />
+      <updated>1732031719659</updated>
+    </task>
+    <task id="LOCAL-00267" summary="Fixed Neighborhood Link">
+      <option name="closed" value="true" />
+      <created>1732042455714</created>
+      <option name="number" value="00267" />
+      <option name="presentableId" value="LOCAL-00267" />
+      <option name="project" value="LOCAL" />
+      <updated>1732042455714</updated>
+    </task>
+    <task id="LOCAL-00268" summary="Added memore of chats and summary">
+      <option name="closed" value="true" />
+      <created>1732108801838</created>
+      <option name="number" value="00268" />
+      <option name="presentableId" value="LOCAL-00268" />
+      <option name="project" value="LOCAL" />
+      <updated>1732108801838</updated>
+    </task>
+    <task id="LOCAL-00269" summary="Added better logging and auth control">
+      <option name="closed" value="true" />
+      <created>1732472217317</created>
+      <option name="number" value="00269" />
+      <option name="presentableId" value="LOCAL-00269" />
+      <option name="project" value="LOCAL" />
+      <updated>1732472217317</updated>
+    </task>
+    <task id="LOCAL-00270" summary="Fixed Many small screen UI issues">
+      <option name="closed" value="true" />
+      <created>1732571657716</created>
+      <option name="number" value="00270" />
+      <option name="presentableId" value="LOCAL-00270" />
+      <option name="project" value="LOCAL" />
+      <updated>1732571657716</updated>
+    </task>
+    <task id="LOCAL-00271" summary="Fixed Many small screen UI issues">
+      <option name="closed" value="true" />
+      <created>1732582042565</created>
+      <option name="number" value="00271" />
+      <option name="presentableId" value="LOCAL-00271" />
+      <option name="project" value="LOCAL" />
+      <updated>1732582042565</updated>
+    </task>
+    <task id="LOCAL-00272" summary="Fixed Many small screen UI issues - Second commit">
+      <option name="closed" value="true" />
+      <created>1732583041177</created>
+      <option name="number" value="00272" />
+      <option name="presentableId" value="LOCAL-00272" />
+      <option name="project" value="LOCAL" />
+      <updated>1732583041177</updated>
+    </task>
+    <task id="LOCAL-00273" summary="ContentBefore was a constant.">
+      <option name="closed" value="true" />
+      <created>1732583831064</created>
+      <option name="number" value="00273" />
+      <option name="presentableId" value="LOCAL-00273" />
+      <option name="project" value="LOCAL" />
+      <updated>1732583831064</updated>
+    </task>
+    <task id="LOCAL-00274" summary="Another attempt">
+      <option name="closed" value="true" />
+      <created>1732584771036</created>
+      <option name="number" value="00274" />
+      <option name="presentableId" value="LOCAL-00274" />
+      <option name="project" value="LOCAL" />
+      <updated>1732584771036</updated>
+    </task>
+    <task id="LOCAL-00275" summary="CorporateBanner and fixed process text">
+      <option name="closed" value="true" />
+      <created>1732604287664</created>
+      <option name="number" value="00275" />
+      <option name="presentableId" value="LOCAL-00275" />
+      <option name="project" value="LOCAL" />
+      <updated>1732604287664</updated>
+    </task>
+    <task id="LOCAL-00276" summary="MAde the logging a little clearer">
+      <option name="closed" value="true" />
+      <created>1732629819341</created>
+      <option name="number" value="00276" />
+      <option name="presentableId" value="LOCAL-00276" />
+      <option name="project" value="LOCAL" />
+      <updated>1732629819341</updated>
+    </task>
+    <task id="LOCAL-00277" summary="More logging added">
+      <option name="closed" value="true" />
+      <created>1732631078039</created>
+      <option name="number" value="00277" />
+      <option name="presentableId" value="LOCAL-00277" />
+      <option name="project" value="LOCAL" />
+      <updated>1732631078039</updated>
+    </task>
+    <task id="LOCAL-00278" summary="More logging added">
+      <option name="closed" value="true" />
+      <created>1732632048631</created>
+      <option name="number" value="00278" />
+      <option name="presentableId" value="LOCAL-00278" />
+      <option name="project" value="LOCAL" />
+      <updated>1732632048631</updated>
+    </task>
+    <task id="LOCAL-00279" summary="Tried to fix JSON PArsing">
+      <option name="closed" value="true" />
+      <created>1732706133026</created>
+      <option name="number" value="00279" />
+      <option name="presentableId" value="LOCAL-00279" />
+      <option name="project" value="LOCAL" />
+      <updated>1732706133026</updated>
+    </task>
+    <task id="LOCAL-00280" summary="Tried to fix JSON PArsing">
+      <option name="closed" value="true" />
+      <created>1732707819471</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
+      <option name="project" value="LOCAL" />
+      <updated>1732707819471</updated>
+    </task>
+    <task id="LOCAL-00281" summary="Tried to fix JSON PArsing">
+      <option name="closed" value="true" />
+      <created>1732979553284</created>
+      <option name="number" value="00281" />
+      <option name="presentableId" value="LOCAL-00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1732979553285</updated>
+    </task>
+    <task id="LOCAL-00282" summary="Tried to fix JSON PArsing">
+      <option name="closed" value="true" />
+      <created>1733064480595</created>
+      <option name="number" value="00282" />
+      <option name="presentableId" value="LOCAL-00282" />
+      <option name="project" value="LOCAL" />
+      <updated>1733064480595</updated>
+    </task>
+    <task id="LOCAL-00283" summary="Tried to fix JSON PArsing">
+      <option name="closed" value="true" />
+      <created>1733149486472</created>
+      <option name="number" value="00283" />
+      <option name="presentableId" value="LOCAL-00283" />
+      <option name="project" value="LOCAL" />
+      <updated>1733149486472</updated>
+    </task>
+    <task id="LOCAL-00284" summary="Fixed more DB errors coming from move to master listing">
+      <option name="closed" value="true" />
+      <created>1733805463904</created>
+      <option name="number" value="00284" />
+      <option name="presentableId" value="LOCAL-00284" />
+      <option name="project" value="LOCAL" />
+      <updated>1733805463904</updated>
+    </task>
+    <task id="LOCAL-00285" summary="Singup page by default">
+      <option name="closed" value="true" />
+      <created>1733976399764</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1733976399764</updated>
+    </task>
+    <option name="localTasksCounter" value="286" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Listing Admin" />
+    <MESSAGE value="Listing Admin&#10;&#10;azure-storage added" />
+    <MESSAGE value="Formatting and Navigatyion fixes" />
+    <MESSAGE value="Fixed COVOTOP AND SITE_LOCATION ERRORS.  Also added OWQQ" />
+    <MESSAGE value="Fixed Site Images" />
+    <MESSAGE value="Major Update.  Fixed Admin site mostly and Bin and Image games" />
+    <MESSAGE value="Converted site to use Json structured data" />
+    <MESSAGE value="Updated Admin Listing Query" />
+    <MESSAGE value="Remove image context" />
+    <MESSAGE value="Moved Json processing pre-display.  User can not see them" />
+    <MESSAGE value="Fixed strange synch issue with buffer" />
+    <MESSAGE value="Fixed Neighborhood Link" />
+    <MESSAGE value="Added memore of chats and summary" />
+    <MESSAGE value="Added better logging and auth control" />
+    <MESSAGE value="Fixed Many small screen UI issues" />
+    <MESSAGE value="Fixed Many small screen UI issues - Second commit" />
+    <MESSAGE value="ContentBefore was a constant." />
+    <MESSAGE value="Another attempt" />
+    <MESSAGE value="CorporateBanner" />
+    <MESSAGE value="CorporateBanner and fixed process text" />
+    <MESSAGE value="MAde the logging a little clearer" />
+    <MESSAGE value="More logging added" />
+    <MESSAGE value="Tried to fix JSON PArsing" />
+    <MESSAGE value="Fixed more DB errors coming from move to master listing" />
+    <MESSAGE value="Singup page by default" />
+    <option name="LAST_COMMIT_MESSAGE" value="Singup page by default" />
+  </component>
+</project>
