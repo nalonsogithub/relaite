@@ -64,21 +64,14 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      - name: Debug Secrets (Check if they exist)
-        run: |
-          if [[ -z "${{ secrets.AZURE_CLIENT_ID }}" ]]; then echo "AZURE_CLIENT_ID is missing"; else echo "AZURE_CLIENT_ID is set"; fi
-          if [[ -z "${{ secrets.AZURE_TENANT_ID }}" ]]; then echo "AZURE_TENANT_ID is missing"; else echo "AZURE_TENANT_ID is set"; fi
-          if [[ -z "${{ secrets.AZURE_SUBSCRIPTION_ID }}" ]]; then echo "AZURE_SUBSCRIPTION_ID is missing"; else echo "AZURE_SUBSCRIPTION_ID is set"; fi
-
       
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
-    
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E80C37EFAC514AC1823D0F51A65CCF0C }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_18E55FD2045648F4AFB2E609B2F1F9C3 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7BB5372CE8B442D788E5A13DFE0CD871 }}
+
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
