@@ -2951,5 +2951,7 @@ def get_statistics():
     finally:
         conn.close()
 if __name__ == '__main__':
-    # print("[DEBUG] Registered Routes:", app.url_map)
-    app.run(debug=False)
+    print("[DEBUG] Registered Routes:", app.url_map)
+    # app.run(debug=False)
+    port = int(os.environ.get('PORT', 8000))  # Ensure it runs on 8000
+    app.run(host='0.0.0.0', port=port, debug=False)
