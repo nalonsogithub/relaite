@@ -42,10 +42,12 @@ no_gpt = False
 
 app = Flask(__name__, static_folder='react_frontend2/build', static_url_path='/')
 # Set up logging for Azure
-if not app.debug:  # Only configure logging if NOT in debug mode
-    gunicorn_logger = logging.getLogger("gunicorn.error")
-    app.logger.handlers = gunicorn_logger.handlers
-    app.logger.setLevel(logging.INFO)  # Set logging level to INFO
+# 🔹 Force Flask to use Gunicorn's logging
+gunicorn_logger = logging.getLogger("gunicorn.error")
+app.logger.handlers = gunicorn_logger.handlers
+app.logger.setLevel(logging.INFO)  # Always log INFO level and above
+
+
 
 app.secret_key = os.environ.get('SECRET_FLASK_KEY')
 
