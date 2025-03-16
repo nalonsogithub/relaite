@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.wrapper {
+/*	background-color: blue;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+/*  height: 100vh; */
+  width: 100%;  
+}
+
+.headerContainer {
+  width: 100%;
+  height: 10%; 
+/*  background-color: #f8f9fa; */
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.headerComponentContainer {
+  width: 50%; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.header {
+  flex-grow: 1; 
+  text-align: center; 
+}
+
+.header_left_container {
+  flex-basis: auto; 
+  text-align: left; 
+}
+
+.header_right_container {
+  flex-basis: auto; 
+  text-align: right; 
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.chatbotOuterContainer {
+/*  background-color: blue;*/
+  width: 95%;
+  height: 90%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/*  background-color: #f8f9fa; */
+  margin-bottom: 10px;
+}
+
+.ChatBotContainer {
+  width: 100%;
+  max-width: 800px; 
+  padding: 3px;
+  background-color: #f9f7f3; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  font-family: 'Georgia', serif; 
+  color: #333; 
+  line-height: 1.6; 
+  overflow-y: auto; 
+  height: 90%; 
+}
+
+.ChatBotContainer::after {
+  content: '';
+  display: block;
+  height: 20px;
+}
+
+
+
+.chatbotContainer {
+  overflow: auto; 
+}
+
+
+.returnButton,
+.toggleButton {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit; 
+  color: #007bff; 
+  transition: color 0.3s ease; 
+}
+
+.returnButton:hover,
+.toggleButton:hover {
+  color: #0056b3; 
+}
+
+.returnButton {
+margin-right: auto;	
+}
+
+.toggleButton {
+	margin-right: auto;
+}
+
+.saveButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;  /* Adds space above and below the button */
+}
+
+.saveButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.saveButton:hover {
+  background-color: #0056b3;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.headerComponentContainer {
+  		width: 90%; 
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.headerComponentContainer {
+  		width: 90%; 
+	}
+}
+

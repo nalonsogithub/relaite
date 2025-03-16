@@ -1,0 +1,49 @@
+html {
+  font-size: 14px; /* Base font size */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Set your preferred font family */
+  font-size: 1rem; /* 14px */
+  line-height: 1.5;
+  color: #333;
+}
+
+h1 {
+  font-size: 2rem; /* 28px */
+}
+
+h2 {
+  font-size: 1.75rem; /* 24.5px */
+}
+
+h3 {
+  font-size: 1.5rem; /* 21px */
+}
+
+h4 {
+  font-size: 1.25rem; /* 17.5px */
+}
+
+h5 {
+  font-size: 1.125rem; /* 15.75px */
+}
+
+h6 {
+  font-size: 1rem; /* 14px */
+}
+
+p, .text {
+  font-size: 1rem; /* 14px */
+  line-height: 1.5;
+}
+
+.small-text {
+  font-size: 0.875rem; /* 12.25px */
+  line-height: 1.5;
+}
+
+/* Additional styles for buttons, inputs, etc. */
+button, input, select, textarea {
+  font-size: 1rem; /* 14px */
+}

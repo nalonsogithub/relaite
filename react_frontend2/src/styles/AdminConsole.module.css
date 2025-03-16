@@ -1,0 +1,220 @@
+.adminConsoleContainer {
+  max-width: 1200px; /* Maximum width for the entire component */
+  margin: 40px auto; /* Center the component and add spacing */
+  padding: 20px;
+  background: #f2f4f8; /* Light gray background for better contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ddd; /* Subtle border to separate sections */
+  margin-bottom: 20px;
+  text-align: center; /* Center the text content */
+}
+
+.topSection h2 {
+  font-size: 24px; /* Larger font size for the welcome text */
+  color: #2c3e50; /* Dark blue-gray text color */
+}
+
+.logoutButton {
+  background-color: #e74c3c; /* Red color for the logout button */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.logoutButton:hover {
+  background-color: #c0392b; /* Slightly darker red on hover */
+}
+
+.listingsSection {
+  margin-bottom: 30px;
+  text-align: center; /* Center the section titles */
+}
+
+.listingsSection h2 {
+  font-size: 22px; /* Slightly smaller font size for section headings */
+  margin-bottom: 15px;
+  color: #34495e; /* Blue-gray color for section headings */
+}
+
+.listingsContainer {
+  display: flex;
+  justify-content: center; /* Center the listing items */
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.listingItem {
+  background: #ffffff; /* White background for listing items */
+  border: 1px solid #ddd; /* Subtle border */
+  padding: 20px;
+  margin-bottom: 20px;
+  width: calc(30% - 30px); /* Adjusted width */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow for elevation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform */
+}
+
+.listingItem:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.listingItem p {
+  margin: 5px 0;
+  color: #2c3e50; /* Darker color for text */
+}
+
+.viewButton, .manageButton, .createListingButton, .generateQRButton {
+  margin-top: 10px;
+  padding: 10px 15px; /* Increased padding for larger buttons */
+  font-weight: 600;
+  background-color: #3498db; /* Blue color for default buttons */
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.viewButton:hover, .manageButton:hover, .generateQRButton:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow on hover */
+}
+
+.manageButton, .generateQRButton {
+  background-color: #2ecc71; /* Green color for Manage Listing button */
+}
+
+.manageButton,  {
+  background-color: #27ae60; /* Darker green on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow on hover */
+}
+
+.createListingContainer {
+  text-align: center; /* Center the entire container */
+  margin: 40px 0;
+}
+
+.createListingButton {
+  background-color: #8e44ad; /* Purple color for the Create Listing button */
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.createListingButton:hover {
+  background-color: #71368a; /* Darker purple on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.versionDropdownContainer {
+  margin-top: 20px;
+}
+
+.versionDropdown {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.versionActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.actionButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actionButton:hover {
+  background-color: #0056b3;
+}
+
+.masterListingContainer {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: calc(30% - 30px); /* Adjusted width for grid layout */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.masterListingContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.adminListingsContainer {
+  display: flex;
+  justify-content: center; /* Centers items in the container */
+  flex-wrap: wrap;
+  gap: 15px; /* Same gap as the view listings */
+}
+
+
+@media screen and (max-width: 1024px) {
+  .listingItem {
+    width: calc(50% - 20px); /* Two items per row on smaller screens */
+  }
+  .masterListingContainer {
+    width: calc(50% - 20px); /* Two items per row on smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .listingItem {
+    width: calc(100% - 20px); /* One item per row on small screens */
+  }
+
+  .topSection {
+    flex-direction: column; /* Stack the elements on top of each other */
+    text-align: center;
+  }
+  .masterListingContainer {
+    width: calc(100% - 20px); /* One item per row on small screens */
+  }
+}
+
+.updateAdminButton {
+  margin-left: 10px; /* Add spacing next to Create Listing button */
+  padding: 10px 20px;
+  background-color: #007BFF; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.updateAdminButton:hover {
+  background-color: #0056b3; /* Hover color */
+}
+
+

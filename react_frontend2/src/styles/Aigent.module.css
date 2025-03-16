@@ -1,0 +1,206 @@
+.AigentContainer {
+  height: 100vh; /* Full viewport height */
+  background-color: #ffffff; /* Changed from #2a3f5f to white */
+  color: #000000; /* Changed text color from white to black for better contrast */
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0;
+  padding-bottom: 20px; /* Space below the header */
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.chatbotContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* Spacing around inner content */
+}
+
+
+.chatLog {
+  max-height: 350px;
+  flex: 1;
+  overflow-y: auto;
+  margin: 0 0 20px 0;
+  background-color: #f0f0f0; /* Lighter shade to contrast with white but not as dark as before */
+  padding: 10px;
+  border: 2px solid #ccc; /* Softer border color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.navWelcomeContainer{
+	widht: 80%;
+}
+
+
+
+.inputForm {
+  display: flex;
+  margin: 0;
+  border: 2px solid #ccc; /* Lighter border color */
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.inputField {
+  flex-grow: 1; /* Allows the input to grow and fill the space */
+  padding: 10px; /* Adequate padding for text */
+  border: none; /* No additional border inside the form */
+  border-radius: 6px 0 0 6px; /* Rounded corners on the left side only */
+}
+
+.inputField, .submitButton {
+  background-color: #ffffff; /* Ensures consistency in background */
+  color: #000; /* Text color changed to black for visibility */
+}
+
+.submitButton {
+  width: 40px; /* Fixed width for the button */
+  border: none; /* No border to visually separate from input field */
+  cursor: pointer; /* Indicates clickable */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 6px 6px 0; /* Rounded corners on the right side only */
+}
+
+/* Ensures both input and button are of the same height and visually aligned */
+.inputField, .submitButton {
+  height: 40px; /* Matching height */
+}
+
+/*
+.questionsBar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 0 10px; 
+}
+*/
+
+/*
+.questionsBar {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+    margin: 0 10px;
+    padding: 10px;
+}
+*/
+
+.questionsBar {
+  width: 100%;  
+  overflow: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+.questionsBar::-webkit-scrollbar {
+    display: none; 
+}
+
+/*
+.questionButton {
+    flex-shrink: 0;
+    margin-right: 10px; 
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+*/
+
+.questionButton {
+    margin: 0 5px; 
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    background-color: #fff;
+    cursor: pointer;
+    white-space: nowrap;  
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.questionButton:last-child {
+    margin-right: 0; /* Removes margin for the last button to avoid unnecessary spacing */
+}
+
+.questionButton:last-child {
+    margin-right: 0; /* Removes margin for the last button to avoid unnecessary spacing */
+}
+
+.questionsBar::-webkit-scrollbar {
+    display: none;             /* For Chrome, Safari, and Opera: hides scrollbar */
+}
+
+.questionButton:hover {
+  background-color: #add8e6; /* Lighter blue on hover for a softer look */
+}
+
+
+.backbuttonContainer {
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  margin: 20px 0;  
+}
+
+.backButton {
+  padding: 8px 12px;  
+  font-size: 14px;  
+  background-color: #4a6fa5;  
+  color: white;  
+  border: none;
+  border-radius: 5px;  
+  cursor: pointer;  
+  transition: background-color 0.3s;  
+}
+
+.backButton:hover {
+  background-color: #3b4f77;  
+}
+
+
+.disabledPointer {
+    cursor: not-allowed !important;
+}
+
+.scrollButton {
+  position: fixed;
+  bottom: 20px; /* Position near the bottom of the screen */
+  left: 50%; /* Horizontally center the button */
+  transform: translateX(-50%); /* Center the button relative to its own width */
+  padding: 10px 20px;
+  background-color: #ffffff; /* White background */
+  color: #4a6fa5; /* Dark blue color for the "v" */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow for visibility */
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 18px; /* Increase font size to make the "v" wider */
+  letter-spacing: 3px; /* Adjust spacing between letters to make the "v" appear wider */
+}
+
+.scrollButton:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+  color: #3b4f77; /* Slightly darker blue color for the "v" on hover */
+}
+

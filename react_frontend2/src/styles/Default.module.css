@@ -1,0 +1,130 @@
+/* Main page wrapper */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 40px;
+}
+
+/* Centered card-like container */
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 30px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for elevated effect */
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Title and text */
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #4a6fa5;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Text content */
+.textContent {
+  font-size: 1em;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.defaultButton {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.defaultButton:hover {
+  background-color: #3b4f77;
+}
+
+/* Form and input styling */
+.inputField {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Sign-up and login containers */
+.signUpContainer,
+.loginContainer {
+  width: 90%;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  text-align: center;
+}
+
+/* Sign-up button container */
+.signUpButtonContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.signUpButton,
+.proceedButton {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.signUpButton:hover,
+.proceedButton:hover {
+  background-color: #3b4f77;
+}
+
+/* Login status message */
+.loginStatus {
+  margin-top: 20px;
+  color: #e74c3c;
+  font-size: 1.2em;
+}
+
+/* Under construction notice */
+.underConstructionNotice {
+  margin-top: 30px;
+}

@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+
+.AigentContainer, .AigentContainerModal {
+  height: 100%; 
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.AigentContainerModal {
+  width: 100%;
+}
+
+.AigentchatbotContainer, .AigentchatbotContainerModal {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+	
+}
+
+.AigentchatbotContainerModal {
+  padding: 0px 5px;
+  max-height: 95%;
+}
+
+.AigentchatLog, .AigentchatLogModal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  margin: 0 0 0px 0;
+  background-color: #f0f0f0;
+  padding: 0px 5px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  width: 100%;
+  max-height: calc(100% - 60px); 
+}
+
+.AigentchatLogModal{
+	max-height: 90%;
+}
+
+.AigentmessageContainer{
+  font-size: 14px;
+}
+
+.AigentscrollButtonContainer {
+  width: 100%;
+  margin-top: auto; 
+  display: flex;
+  padding: 0px;
+}
+
+.AigentinputForm {
+  display: flex;
+  margin: 0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  height: 40px; 
+  width: 100%;
+
+}
+
+.AigentinputField {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+}
+
+.AigentinputField, .AigentsubmitButton {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.AigentsubmitButton {
+  width: 40px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 6px 6px 0;
+}
+
+
+
+.Aigentdisable-clicks {
+  pointer-events: none;
+}
+
+
+
+.AigentcancelButton {
+  background-color: #e57373;
+  color: white;
+  border: none;
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+	border-radius: 4px;
+  z-index: 1001;
+}
+
+
+
+
+
+.AigentscrollButton {
+  position: absolute;
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  padding: 3px 20px;
+  color: #4a6fa5; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 18px; 
+  letter-spacing: 3px; 
+  
+}
+
+
+
+.AigentscrollButton:hover {
+  background-color: #f0f0f0; 
+  color: #3b4f77; 
+}
+
+
+
+
+.AigentquickQuestionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+}
+
+.AigentarrowContainer {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 2px;
+  user-select: none;
+  min-width: 10%;
+}
+
+/*
+.AigentquestionCarousel {
+  display: flex;
+  overflow: hidden; 
+  min-width: 80%;
+  gap: 10px; 
+  max-width: 300px; 
+}
+*/
+.AigentquestionCarousel {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent items from wrapping to a new line */
+  overflow: hidden; /* Hide extra items that go off to the right */
+  white-space: nowrap; /* Prevent the text from wrapping within each item */
+  width: 100%; /* Ensure the container takes up the full width of the parent */
+  gap: 10px; /* Space between items */
+  padding: 8px;
+  align-items: center; /* Center items vertically */
+}
+
+/*
+.AigentquestionItem {
+  flex: 1 1 auto;
+  font-size: 14px;
+  padding: 2px 10px;
+  background-color: #f8f9fa;
+  margin: 0 1px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+*/
+
+.AigentquestionItem {
+  display: inline-block; 
+  width: auto; 
+  font-size: 14px;
+  padding: 8px 12px; 
+  background-color: #f8f9fa;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  white-space: nowrap; 
+}
+
+
+.AigentquestionItem:hover {
+  background-color: #e0e0e0;
+}
+
+.AigenthighlightedQuestion {
+  border: 2px solid #007bff;
+  background-color: #e6f0ff;
+}
+
+/* Background for questions from CONVOTOP */
+.CONVOTOPBackground {
+  background-color: #cce0ff;  /* More noticeable blue */
+  border: 2px solid #007bff;  /* Bold blue outline */
+  color: #003366;  /* Darker text color for better contrast */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Background for questions from SITE_LOCATION */
+.SITELOCATIONBackground {
+  background-color: #ccffcc;  /* More noticeable green */
+  border: 2px solid #28a745;  /* Bold green outline */
+  color: #006600;  /* Darker green text for better contrast */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effects for both */
+.CONVOTOPBackground:hover {
+  background-color: #99ccff;  /* Lighter blue on hover */
+  border-color: #0056b3;  /* Darker blue border on hover */
+}
+
+.SITELOCATIONBackground:hover {
+  background-color: #99ff99;  /* Lighter green on hover */
+  border-color: #218838;  /* Darker green border on hover */
+}
+
+/* Background for questions from OWQQ */
+.OWQQBackground {
+  background-color: #ffa500;  /* Orange background */
+  border: 2px solid #ff8c00;  /* Darker orange border */
+  color: #4d2600;  /* Darker text color for contrast */
+  size: 8px; 
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for OWQQ */
+.OWQQBackground:hover {
+  background-color: #ffcc80;  /* Lighter orange on hover */
+  border-color: #e67e00;  /* Darker orange on hover */
+}
+
+
+/* Small mobile devices */
+@media (max-width: 400px) {
+  .AigentmessageContainer{
+    font-size: 10px;
+  }
+
+}
+
+/* Larger smartphones */
+@media (max-width: 767px) {
+  .AigentmessageContainer{
+    font-size: 12px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .AigentmessageContainer{
+    font-size: 14px;
+  }
+}
+
+.clipboardIconContainer {
+  position: absolute; /* Position relative to the parent */
+  top: -20px;          /* Distance from the top */
+  right: 30px;        /* Distance from the right */
+  z-index: 1000;      /* Ensure it appears above other content */
+  cursor: pointer;
+}
+
+.clipboardIcon {
+  font-size: 1.5rem;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.clipboardIcon:hover {
+  color: #000;
+}

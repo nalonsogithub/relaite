@@ -1,0 +1,80 @@
+import React, { useEffect, useState } from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import { useCarouselImages } from '../contexts/SiteCarouselContext';
+import styles from '../styles/SiteCarousel.module.css';
+
+const SiteCarousel = ({ carouselType, onImageClick, width, height, showThumbnails, showImageCount }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [images, setImages] = useState([]); // Store images in local state
+  const { loadImageData, imagesLoaded, setImagesLoaded } = useCarouselImages(); // Removed carouselType from hook
+
+  // Load images when the component mounts
+  useEffect(() => {
+    if (carouselType) {
+      loadImageData(carouselType).then(fetchedImages => {
+        setImages(fetchedImages); // Save fetched images to state
+//        setImagesLoaded(true);
+      }).catch(error => {
+        console.error('Error loading images:', error);
+      });
+    }
+  }, [carouselType, loadImageData, setImagesLoaded]);
+
+  if (!imagesLoaded) {
+    return <div>Loading...</div>;
+  }
+
+  if (images.length === 0) {
+    return <div>No images available</div>;
+  }
+
+  const settingsMain = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: true,
+    beforeChange: (current, next) => setCurrentSlide(next),
+    nextArrow: <div className={styles.nextArrow}>→</div>,
+    prevArrow: <div className={styles.prevArrow}>←</div>,
+  };
+
+  const handleImageClick = (event, index) => {
+    const image = images[index];
+    const prompt = image.image_click_user_prompt;
+    const question = image.image_click_system_prompt;
+    if (onImageClick) {
+      onImageClick(image, prompt, question);
+    }
+  };
+
+  return (
+    <div className={styles.carouselContainer}>
+      <Slider {...settingsMain}>
+        {images.map((image, index) => (
+          <div key={index} className={styles.carouselSlide}>
+            <img 
+              src={image.url} 
+              alt={`Slide ${index + 1}`} 
+              style={{ width, height }} 
+              onClick={(event) => handleImageClick(event, index)}
+            />
+          </div>
+        ))}
+      </Slider>
+      {showImageCount && (
+        <div className={styles.currentSlideIndicator}>
+          {currentSlide + 1} / {images.length}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default SiteCarousel;

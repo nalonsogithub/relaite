@@ -1,0 +1,100 @@
+import React, { useState, useEffect } from 'react';
+import Aigent_with_BinImageQGame from './Aigent_with_BinImageQGame';
+import RenderBinImageQGame from './RenderBinImageQGame';
+import styles from '../styles/WrapperWithAgentSummary.module.css';
+import { FaChevronUp, FaChevronDown } from 'react-icons/fa'; 
+//import { useChat } from '../contexts/ChatContext';
+//import { useImages } from '../contexts/CarouselImageContext';
+import { useNavigate } from 'react-router-dom';
+
+const WrapperWithAgentSummary = () => {
+//  const [showCarousel, setShowCarousel] = useState(true);
+
+// Comment out useChat() and useImages() for now
+// const { carouselType, setCarouselType, isLoading } = useChat();
+// const { loadImageData } = useImages();
+// const { setQuestion, setPrompt, assistant, setAssistant } = useChat();
+
+const carouselType = "default";  // Default value for carouselType
+const setCarouselType = () => {};  // Default to a no-op function
+const isLoading = false;  // Default value for isLoading (not loading)
+
+const loadImageData = () => {};  // Default to a no-op function
+
+const setQuestion = () => {};  // Default to a no-op function
+const setPrompt = () => {};  // Default to a no-op function
+const assistant = "Default Assistant";  // Default value for assistant
+const setAssistant = () => {};  // Default to a no-op function
+	
+
+  const navigate = useNavigate();
+//	const navigate = 'Hello'
+
+//  useEffect(() => {
+//    if (carouselType !== 'detail') {
+//      setCarouselType('detail'); 
+//	  setAssistant('main');
+//    }
+//  }, [carouselType, setCarouselType, assistant, setAssistant]);
+  
+//  const toggleCarousel = () => {
+//    setShowCarousel(!showCarousel);
+//  };
+//
+//  const collapseCarousel = () => {
+//    setShowCarousel(false);
+//  };
+//  
+//  const handleImageClick = (imageData, prompt = null, question = null) => {
+//	if (isLoading) return;  
+//    if (imageData.conversation_code.toLowerCase() === 'back') {
+//      setAssistant('main');
+//      setPrompt(prompt);
+//      setQuestion(question);
+//      navigate('/MainCarouselWrapper');
+//	} else if (prompt) {
+//	  setAssistant('double_aigent');
+//      setPrompt(prompt);
+//      setQuestion(question);
+//    } else {
+//      console.log('No prompt provided');
+//    }
+//  };
+	
+  const goToCarousel = () => {
+    navigate('/WrapperMainSiteCarousel');
+  };	
+
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.headerContainer}>
+	  	<div className={styles.headerComponentContainer}>
+		  <div className={styles.header_left_container}>
+			<button className={styles.returnButton} onClick={goToCarousel}>
+			  ←
+		    </button>
+		  </div>
+		  <div className={styles.header}>
+		    <h1 className={styles.heading}>Conversation Summary</h1>
+		  </div>
+
+	  	</div>
+	  </div>
+
+
+      <div className={styles.chatbotContainer}>
+
+        <div className={styles.ChatBotContainer}>
+			<Aigent_with_BinImageQGame
+			  showFull={false}
+			  isModal={false}
+			  showLabels={false}
+			/>	  
+	  	</div>
+	  	
+      </div>
+    </div>
+  );
+};
+
+export default WrapperWithAgentSummary;

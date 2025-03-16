@@ -1,0 +1,34 @@
+.centerContainer {
+  display: flex;
+/*  padding: 50px;*/
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.floatingContainer {
+  padding: 15px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  border-radius: 10px;
+}
+/* Responsive Design Adjustments */
+@media only screen and (max-width: 768px) {
+	.floatingContainer {
+  		width: 100%; 
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.floatingContainer {
+  		width: 100%; 
+	}
+}

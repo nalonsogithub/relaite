@@ -1,0 +1,113 @@
+.carouselExpanded {
+  height: 50vh; /* Ensures the carousel takes 50% of the viewport height */
+  width: 100%;
+}
+
+.carouselCollapsed {
+  height: 30px; /* Or any other height for the collapsed state */
+  width: 100%;
+}
+
+.toggleButton {
+  background-color: #ccc;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  flex: 0 1 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.footerContainer {
+  flex: 0 1 auto;
+  padding: 20px;
+}
+
+.carouselWrapper {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%; /* Ensure the carousel takes the full height of the container */
+}
+
+.carouselWrapper .slick-slide {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure slides take full height */
+}
+
+
+
+
+.carouselWrapper .slick-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain; /* Ensure images fit within their container */
+}
+
+.carouselWrapper .slick-prev,
+.carouselWrapper .slick-next {
+  z-index: 1;
+  background: #ccc;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselWrapper .slick-prev:before,
+.carouselWrapper .slick-next:before {
+  opacity: 0.75;
+  color: #000;
+  font-size: 20px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide overflow content */
+}
+
+.imageContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensure the image covers the container */
+}
+
+.overlayButton {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.overlayButton:hover {
+  background: rgba(255, 255, 255, 1);
+}

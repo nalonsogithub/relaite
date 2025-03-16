@@ -1,0 +1,35 @@
+.floatingWordsContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.questionArea {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.questionText {
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.floatingWord {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 50px;
+  background-color: #4a6fa5;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 5;
+  position: absolute;
+  transform: translateX(-50%); /* Center horizontally */
+}

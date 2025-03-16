@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+.CorporateBannerContainer {
+	width: 100%;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; 
+	padding: 5px;
+  width: 100%;  
+  gap: 10px;
+}
+
+.headerContainer {
+  width: 50%;
+  height: 8%; 
+/*  background-color: #f8f9fa; */
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+.headerComponentContainer {
+  width: 100%; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.header {
+  flex-grow: 1; 
+  text-align: center; 
+}
+
+.header_left_container {
+  flex-basis: auto; 
+  text-align: left; 
+}
+
+.header_right_container {
+  flex-basis: auto;
+  text-align: right; 
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.binQGameContainer {
+  width: 50%;
+  height: 45%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; 
+  margin-bottom: 50px;
+	
+}
+.chatbotContainer {
+  width: 50%;
+  height: 35%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; 
+  margin-bottom: 10px;
+}
+.chatbotContainer90 {
+  width: 50%;
+  height: 45%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; 
+  margin-bottom: 10px;
+	
+}
+
+.chatbotContainer90 {
+	height: 90%;
+}
+
+.chatbotContainer {
+/*  overflow: auto; */
+/*  height: 40%;*/
+}
+
+
+
+
+
+
+.returnButton,
+.toggleButton {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit; 
+  color: #007bff; 
+  transition: color 0.3s ease; 
+}
+
+.returnButton:hover,
+.toggleButton:hover {
+  color: #0056b3; 
+}
+
+.returnButton {
+margin-right: auto;	
+
+}
+
+.toggleButton {
+	margin-right: auto;
+
+}
+
+/* Responsive Design Adjustments */
+@media only screen and (max-width: 768px) {
+  .binQGameContainer, .chatbotContainer, .chatbotContainer90, .headerContainer {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .binQGameContainer, .chatbotContainer, .chatbotContainer90, .headerContainer {
+    width: 100%;
+	
+  }
+}
+

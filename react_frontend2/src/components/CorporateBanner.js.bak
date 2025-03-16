@@ -1,0 +1,51 @@
+import React, { useState, useEffect } from "react";
+import styles from "../styles/CorporateBanner.module.css"; // Ensure this file exists
+
+const CorporateBanner = ({ title, url, marqueeText }) => {
+  const [currentMarquee, setCurrentMarquee] = useState("");
+
+  useEffect(() => {
+    if (marqueeText) {
+      setCurrentMarquee(marqueeText); // Update marquee text when it changes
+    }
+  }, [marqueeText]);
+
+  return (
+    <div className={styles.bannerContainer}>
+      {/* Banner Header */}
+      <div className={styles.banner}>
+        <div className={styles.leftDiv}></div>
+        <div className={styles.middleDiv}>
+          {url ? (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.titleLink}
+            >
+              {title}
+            </a>
+          ) : (
+            <span className={styles.titleText}>{title}</span>
+          )}
+        </div>
+        <div className={styles.rightDiv}>
+          <img
+            src="https://hbbreact.blob.core.windows.net/hbbblob2/REAL_ESTaiTE/oha_BLUE.png"
+            alt="OHA Logo"
+            className={styles.icon}
+          />
+        </div>
+      </div>
+
+      {/* Marquee */}
+      {currentMarquee && (
+        <div className={styles.marqueeContainer}>
+          <div className={styles.marquee}>{currentMarquee}</div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default CorporateBanner; // Ensure the component is exported

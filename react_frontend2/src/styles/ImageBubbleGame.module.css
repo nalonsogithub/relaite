@@ -1,0 +1,346 @@
+:root {
+  --pie-chart-width: 250px;
+  --pie-chart-height: 250px;
+  --pie-chart-outer-radius: 70%;
+}
+
+.pieChart {
+  width: var(--pie-chart-width);
+  height: var(--pie-chart-height);
+}
+
+.gameContainer {
+  width: 100vw; 
+  max-width: 100%; 
+  height: auto; 
+  display: flex; 
+  flex-direction: column; 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+
+.fixedAspectContainer {
+  position: relative;
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding-top: 56.25%; 
+  overflow: hidden; 
+  background-color: #f0f0f0; 
+}
+
+.fixedAspectContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+	
+}
+
+
+
+
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px;
+  justify-content: center;
+  padding: 5px;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 80vw; 
+  max-height: 80vh; 
+  overflow: hidden; 
+}
+
+.gridItem {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px; 
+  margin: 0;
+  width: 100%;
+  min-height: 60px;
+  height: 100%;
+  overflow: hidden; /* Ensure content doesn't overflow the container */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240, 240, 240, 0.7); 
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .gridContainer {
+	max-width: 95vw; 
+	max-height: 95vh; 
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .gridContainer {
+	max-width: 95vw; 
+	max-height: 95vh; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 5px; 
+  }
+
+  .gridItem {
+    min-height: 50px; 
+  }
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.wordBelowIcon {
+  font-size: 14px; 
+  color: #333; 
+  font-weight: bold;
+  text-align: center; 
+  margin-top: 5px; 
+}
+
+.percentage {
+  display: none; 
+}
+
+.instructions {
+  text-align: center;
+  font-size: 16px; 
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+
+.selectedWord {
+  visibility: hidden; 
+}
+
+.inactive {
+  pointer-events: none; 
+  opacity: 0.8; 
+}
+
+/* Icon styling */
+.icon {
+  font-size: 40px; 
+  color: #ffffff; 
+  margin-bottom: 10px; 
+}
+
+
+.gridItem[style*="visibility: hidden"] {
+  background-color: transparent; 
+  box-shadow: none; 
+}
+
+.pieChartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+  justify-content: flex-start;  
+  text-align: left;
+  height: 100vh;  
+  width: 100%;  
+  box-sizing: border-box;
+}
+.pieChartWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+
+.chartContainer {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;     
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+.chartHeader {
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+}
+
+.promptContainer {
+  margin-bottom: 10px;
+  text-align: left; /* Left-align the entire container's content */
+  width: 100%;      /* Ensure the container takes the full width */
+}
+
+.prompt {
+  text-align: left;  /* Left-align the text inside the prompt */
+  font-size: 24px;   /* Font size for prominence */
+  font-weight: normal;
+  color: #333;       /* Dark color for professionalism */
+  margin-bottom: 20px; /* Space between the prompt and next element */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  width: 100%;       /* Ensure the prompt text takes the full width */
+}
+
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+/*  background-color: rgba(0, 0, 0, 0.5); */
+  pointer-events: none; /* Prevents the overlay from blocking clicks */
+}
+
+.title {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  pointer-events: none; /* Prevents the title from blocking clicks */
+}
+
+.playButton {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  pointer-events: auto; /* Allows the button to be clickable */
+  animation: wiggle 1s infinite;
+}
+
+.playButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .hoverImage {
+    max-width: 100px; /* Reduce the size of images on smaller screens */
+  }
+
+  .wordAboveImage, .percentage {
+    font-size: 14px; /* Reduce font size for words and percentages on smaller screens */
+  }
+
+  .prompt {
+    font-size: 20px; /* Adjust prompt font size on smaller screens */
+    margin-bottom: 15px; /* Adjust space below the prompt */
+  }
+  .promptContainer {
+    margin-bottom: 5px;
+  }
+	
+  .instructions {
+    font-size: 12px; /* Adjust prompt font size on smaller screens */
+    margin-bottom: 15px; /* Adjust space below the prompt */
+  }
+
+  .playButton {
+	font-size: 1.1rem;
+  }
+  .title {
+    color: #fff;
+    font-size: 2.2rem;
+  }
+
+
+
+	
+	
+	
+}
+
+@media only screen and (max-width: 480px) {
+  .hoverImage {
+    max-width: 80px; /* Further reduce image size for very small screens */
+  }
+
+  .wordAboveImage, .percentage {
+    font-size: 9px; /* Further reduce font size for words and percentages */
+  }
+
+  .prompt {
+    font-size: 16px; /* Further adjust prompt font size */
+    margin-bottom: 10px; /* Adjust space below the prompt */
+  }
+  .promptContainer {
+    margin-bottom: 0px;
+  }
+	
+  .instructions {
+    font-size: 10px; /* Adjust prompt font size on smaller screens */
+    margin-bottom: 0px; /* Adjust space below the prompt */
+  }
+	.wordBelowIcon {
+		font-size: 10px;
+	}
+  .playButton {
+	font-size: .7rem;
+	padding: 5px 10px;
+  }
+  .title {
+	color: #fff;
+	font-size: 1.9rem;
+  }
+}
+
+
+

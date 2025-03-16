@@ -1,0 +1,53 @@
+/* RenovationComponent.module.css */
+
+.renovationContainer {
+  width: 100%; /* Take up 100% of the available width */
+  margin: 2rem 0; /* Adjust the margin as needed */
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a drop shadow */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+.renovationTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center; /* Centers the text */
+}
+
+.piechartcontainer {
+	width: 50%;
+	display: flex;
+	align-content: center;
+}
+
+.tableField {
+  font-size: 12px;
+}
+
+.buttonSmallFont {
+  font-size: 0.8rem; /* Smaller font size for button */
+  background-color: #4a6fa5;
+  color: white;
+  transition: background-color 0.3s;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+
+
+.buttonSmallFont:hover {
+  background-color: #3b4f77;
+}
+
+
+.customRenovationContainer {
+  margin-top: 20px;
+}
+
+.buttonSmallFont {
+  font-size: 0.8rem;
+}

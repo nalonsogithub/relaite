@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+}
+
+.carouselContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%; /* 50% of the viewport height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to carousel container */
+}
+
+
+.chatbotContainer {
+  flex: 1;
+  height: 50%; /* 50% of the viewport height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to chatbot container */
+  overflow: auto; /* Ensure the chatbot content is scrollable */
+}
+
+.toggleButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toggleButton:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.headerContainer {
+  width: 50%;
+  margin: 0 auto; /* Center the container horizontally */
+}
+.header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+/*  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.heading {
+  font-size: 24px;
+  margin: 0;
+}
+
+.returnButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+

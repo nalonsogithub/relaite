@@ -1,0 +1,48 @@
+import React, { useState } from 'react';
+import ImageBubbleGame from './ImageBubbleGame';
+//import RenderBinImageQGame from './RenderBinImageQGame';
+import styles from '../styles/RenderImageBubbleGame.module.css';
+
+const RenderImageBubbleGame = ({onImageBubbleGameAnswersSelected}) => {
+	
+  const [showIntro, setShowIntro] = useState(true);
+  
+const handleAnswersSelected = (question, answers) => {
+  onImageBubbleGameAnswersSelected(question, answers); // Pass the received question and answers
+//  console.log(`RENDER Question: ${question}`);
+//  console.log(`RENDER Selected Answers: ${answers}`);
+};
+	
+	
+  const handleIntroClick = () => {
+    setShowIntro(false);
+  };
+
+  return (
+    <div className={styles.bg_mainContainer}>
+      {/* Container Above the Game */}
+      <div className={styles.bg_textContainer}>
+        <h2>Welcome to the Real Estate Experience</h2>
+        <p>Explore the property and share your thoughts with us. Your feedback is valuable!</p>
+      </div>
+      
+      {/* The Game Container */}
+      <div className={styles.bg_gameWrapper}>
+        <div className={styles.bg_floatingContainer}>
+          <ImageBubbleGame 
+            gameHeight="100%"
+            gameWidth="100%"
+	        onImageBubbleGameAnswersSelected={handleAnswersSelected} // Pass the callback function
+          />
+        </div>
+      </div>
+      
+      {/* Container Below the Game */}
+      <div className={styles.bg_textContainer}>
+        <p>Thank you for participating! Your insights help us improve our services.</p>
+      </div>
+    </div>  
+  );
+};
+
+export default RenderImageBubbleGame;

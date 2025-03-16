@@ -1,0 +1,183 @@
+.bin-game-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container for each tile */
+.bingame-tile {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the title and delete button */
+.bingame-top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Title div - centers the text */
+.bingame-title {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Delete button container */
+.bingame-delete {
+  width: 30px; /* Fix the width */
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Delete button styling */
+.delete-tile-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-tile-button:hover {
+  background-color: darkred;
+}
+
+
+
+
+
+.page-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #4a6fa5;
+}
+
+.tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tile {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-section {
+  text-align: center;
+}
+
+.image-preview {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+  margin: 10px 0;
+}
+
+.file-input {
+  display: block;
+  margin: 10px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.questions-container {
+  margin-top: 20px;
+}
+
+.question-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.question-input,
+.order-input {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.save-button,
+.add-button,
+.delete-button {
+  padding: 10px 20px;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.save-button:hover,
+.add-button:hover,
+.delete-button:hover {
+  background-color: #3b4f77;
+}
+
+
+
+.back-button {
+  width: 150px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #3b4f77;
+}
+.navButtonContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+

@@ -1,0 +1,47 @@
+.statisticsContainer {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.statCard {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.statCard h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.statCard p {
+    font-size: 1em;
+    color: #555;
+}
+
+.statCard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.statCard table th, .statCard table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.statCard table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}

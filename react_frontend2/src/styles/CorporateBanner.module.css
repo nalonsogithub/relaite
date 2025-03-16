@@ -1,0 +1,87 @@
+.bannerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+/*  background-color: #f4f4f4;*/
+  padding: 10px;
+}
+.leftBoxImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover; /* Ensures the image fits properly */
+}
+
+.leftBoxText {
+/*  color: white;*/
+  font-size: 14px;
+  text-align: center;
+}
+.rightIconContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns content to the right */
+}
+
+.leftIconContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns content to the left */
+}
+
+.titleContainer {
+  flex: 2; /* Allows the title to take more space while staying centered */
+  text-align: center;
+}
+
+.titleLink,
+.titleText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333; /* Adjust color as needed */
+  text-decoration: none;
+}
+
+.icon {
+  width: 50px;
+  height: 50px; /* Ensure the icons have consistent sizing */
+}
+
+
+.marqueeContainer {
+  height: 20px; /* Fixed height for marquee */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/*  margin-top: 5px;*/
+  overflow: hidden;
+}
+.marqueeText {
+  font-size: 12px;
+  color: #555;
+  animation: fadeOut 5s forwards; /* Fade out after 5 seconds */
+}
+
+/* Animation for fading out */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+

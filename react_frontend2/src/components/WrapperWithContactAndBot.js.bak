@@ -1,0 +1,93 @@
+import React, { useState, useEffect } from 'react';
+import { FaChevronUp, FaChevronDown } from 'react-icons/fa'; 
+import { useNavigate } from 'react-router-dom';
+import Aigent_2 from './Aigent_2';
+import Contact from './Contact';
+import styles from '../styles/WrapperWithContactAndBot.module.css';
+
+const WrapperWithContactAndBot = () => {
+  const [showCarousel, setShowCarousel] = useState(true);
+
+
+const carouselType = "default";  // Default value for carouselType
+const setCarouselType = () => {};  // Default to a no-op function
+const isLoading = false;  // Default value for isLoading (not loading)
+
+const loadImageData = () => {};  // Default to a no-op function
+
+const setQuestion = () => {};  // Default to a no-op function
+const setPrompt = () => {};  // Default to a no-op function
+const assistant = "Default Assistant";  // Default value for assistant
+const setAssistant = () => {};  // Default to a no-op function
+	
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (carouselType !== 'agent') {
+      setCarouselType('main'); 
+	  setAssistant('agent');
+    }
+  }, [carouselType, setCarouselType, assistant, setAssistant]);
+  
+  const toggleCarousel = () => {
+    setShowCarousel(!showCarousel);
+  };
+
+  const collapseCarousel = () => {
+    setShowCarousel(false);
+  };
+  
+
+	
+  const goToCarousel = () => {
+    navigate('/WrapperMainSiteCarousel');
+  };	
+
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.headerContainer}>
+	  	<div className={styles.headerComponentContainer}>
+		  <div className={styles.header_left_container}>
+			<button className={styles.returnButton} onClick={goToCarousel}>
+			  ←
+		    </button>
+		  </div>
+		  <div className={styles.header}>
+		    <h1 className={styles.heading}>Agent Details</h1>
+		  </div>
+
+		  <div className={styles.header_right_container}>
+			 <button onClick={toggleCarousel} className={styles.toggleButton}>
+			   {showCarousel ? <FaChevronUp /> : <FaChevronDown />} {/* Show the appropriate icon */}
+			 </button>
+		  </div>
+	  	</div>
+	  </div>
+
+      <div
+        className={
+          showCarousel ? styles.chatbotContainer : styles.chatbotContainer90
+        }
+      >
+        <Aigent_2 
+	  		collapseCarousel={collapseCarousel}
+	    	showFull = {true}
+	  		maxHeight = "500px"
+	  		chat_type = "agent"
+	    />
+      </div>
+	  
+	  
+	  
+      {showCarousel && (
+        <div className={styles.contactContainer}>
+          <Contact />
+        </div>
+      )}
+
+    </div>
+  );
+};
+
+export default WrapperWithContactAndBot;

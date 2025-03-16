@@ -1,0 +1,259 @@
+
+@keyframes floatAndSway1 {
+  0% {
+    transform: translateY(100%) translateX(0%);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(75%) translateX(50%);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(50%) translateX(100%);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translateY(25%) translateX(50%);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(0) translateX(0%);
+    opacity: 0.8;
+  }
+}
+
+
+@keyframes floatAndSway2 {
+  0% {
+    transform: translateY(100%) translateX(-100%);
+    opacity: 0.8;
+  }
+  20% {
+    transform: translateY(80%) translateX(-60%); /* Y spacing 16% */
+    opacity: 0.85;
+  }
+  40% {
+    transform: translateY(60%) translateX(-20%); /* Y spacing 16% */
+    opacity: 0.9;
+  }
+  60% {
+    transform: translateY(40%) translateX(20%); /* Y spacing 16% */
+    opacity: 0.85;
+  }
+  80% {
+    transform: translateY(20%) translateX(0%); /* Y spacing 16% */
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) translateX(50%); /* Y spacing 36%, largest and final Y spacing */
+    opacity: 0.75;
+  }
+}
+
+@keyframes floatAndSway3 {
+  0% {
+    transform: translateY(100%) translateX(50%);
+    opacity: 0.8;
+  }
+  15% {
+    transform: translateY(85%) translateX(25%); /* Y spacing 15% */
+    opacity: 0.85;
+  }
+  30% {
+    transform: translateY(70%) translateX(0%); /* Y spacing 15% */
+    opacity: 0.9;
+  }
+  45% {
+    transform: translateY(55%) translateX(-25%); /* Y spacing 15% */
+    opacity: 0.85;
+  }
+  60% {
+    transform: translateY(40%) translateX(-50%); /* Y spacing 15% */
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(25%) translateX(-75%); /* Y spacing 15% */
+    opacity: 0.75;
+  }
+  90% {
+    transform: translateY(10%) translateX(-50%); /* Y spacing 15% */
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-1%) translateX(-25%); /* Y spacing 11%, final Y spacing */
+    opacity: 0.65;
+  }
+}
+
+@keyframes floatAndSway4 {
+  0% {
+    transform: translateY(100%) translateX(-50%);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(75%) translateX(-30%);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(50%) translateX(0%);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translateY(25%) translateX(30%);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(0) translateX(50%);
+    opacity: 0.8;
+  }
+}
+
+@keyframes floatAndSway5 {
+  0% {
+    transform: translateY(100%) translateX(-80%);
+    opacity: 0.8;
+  }
+  20% {
+    transform: translateY(80%) translateX(-40%);
+    opacity: 0.85;
+  }
+  40% {
+    transform: translateY(60%) translateX(0%);
+    opacity: 0.9;
+  }
+  60% {
+    transform: translateY(40%) translateX(40%);
+    opacity: 0.85;
+  }
+  80% {
+    transform: translateY(20%) translateX(80%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) translateX(30%);
+    opacity: 0.75;
+  }
+}
+
+@keyframes floatAndSway6 {
+  0% {
+    transform: translateY(100%) translateX(0%);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(75%) translateX(30%);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(50%) translateX(60%);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translateY(25%) translateX(30%);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(0) translateX(0%);
+    opacity: 0.8;
+  }
+}
+
+.balloonContainer1 {
+  animation: floatAndSway1 8s cubic-bezier(0, 0, 1, 1) infinite;
+}
+
+.balloonContainer2 {
+  animation: floatAndSway2 9s cubic-bezier(0, 0, 1, 1) infinite;
+}
+
+.balloonContainer3 {
+  animation: floatAndSway3 10s cubic-bezier(0, 0, 1, 1) infinite;
+}
+
+.balloonContainer4 {
+  animation: floatAndSway4 8.5s cubic-bezier(0, 0, 1, 1) infinite;
+}
+
+.balloonContainer5 {
+  animation: floatAndSway5 9.5s cubic-bezier(0, 0, 1, 1) infinite;
+}
+
+.balloonContainer6 {
+  animation: floatAndSway6 10.5s cubic-bezier(0, 0, 1, 1) infinite;
+}
+
+
+.balloonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.8; 
+  position: relative;
+  bottom: 0;
+}
+
+.balloonContainer.greenBurst {
+  animation: burstGreen 0.5s forwards;
+}
+
+.balloonContainer.redBurst {
+  animation: burstRed 0.5s forwards;
+}
+
+.balloonImage {
+  width: 100%;
+  height: auto;
+}
+
+.balloonText {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: white; 
+  text-align: center;
+  pointer-events: none;
+}
+
+.questionGame {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.8); /* Optional: Adds a background for readability */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.balloons {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.balloonWrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+}

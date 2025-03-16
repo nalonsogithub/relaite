@@ -1,0 +1,95 @@
+.calendarContainer {
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+  overflow-y: auto;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.backIcon {
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.highlight {
+  background-color: #ffeb3b;
+  color: #000;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.timeSlotsContainer {
+  margin-top: 20px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.timeSlot {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.selectedTime {
+  background-color: #2ecc71;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inputError {
+  border-color: red;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 12px;
+  margin: 5px 0 10px 0;
+}
+
+.submitButton {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submitButton:hover {
+  background-color: #2980b9;
+}
+
+.confirmationContainer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}

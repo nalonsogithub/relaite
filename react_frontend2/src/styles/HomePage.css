@@ -1,0 +1,41 @@
+@charset "utf-8";
+.responsive-image {
+    width: 100%;
+    height: 100%;
+}	
+.hotspot {
+  position: absolute;
+  display: block;
+}	
+.waiting-cursor {
+    cursor: wait;
+}	
+
+#loadingPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+			
+.below-image-container {
+    display: flex; /* Aligns children divs (content containers) next to each other */
+    justify-content: center; /* Center the content containers horizontally */
+    gap: 20px; /* Optional: Adds space between the content containers */
+}
+
+.below-image-content-container {
+    flex: 1; /* Allows the containers to grow and fill the parent container equally */
+    max-width: 100%; /* Sets a max-width for the containers to make the images appear smaller */
+}
+
+.below-image-content-container img {
+    width: 100%; /* Makes the image fill the container */
+    height: auto; /* Keeps the image aspect ratio */
+}
+

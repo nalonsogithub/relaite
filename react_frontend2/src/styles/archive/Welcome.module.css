@@ -1,0 +1,63 @@
+/* Welcome.module.css */
+
+.welcomeContainer {
+  background: white;
+}
+
+.welcomecenteredContainer {
+  max-width: 60%; /* Adjust based on your requirements */
+  margin: 0 auto;
+}
+
+.welcomelogoContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.welcomeleftLogo,
+.welcomerightLogo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.welcomeimageContainer {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.welcomestyledImage {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.welcomebuttonContainer {
+  text-align: center;
+}
+
+.welcomeleftLogo img,
+.welcomerightLogo img {
+  max-width: 100px;
+}
+
+.welcomelink {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #4a6fa5;  /* Blue color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;  /* Add margin to space out buttons */
+  transition: background-color 0.3s;
+}
+
+.welcomelink:hover {
+  background-color: #3b4f77;  /* Darker blue on hover */
+}

@@ -1,0 +1,144 @@
+
+
+
+/* MAIN */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  height: 100vh;
+}
+
+/* HEADER */
+.header {
+  flex: 0 1 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* Tumbnails */
+.thumbnailsContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.thumbnailsContainer img {
+  width: 50px;
+  height: 40px;
+  margin: 0 5px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnailsContainer img:hover {
+  cursor: pointer;
+}
+
+.thumbnailsContainer img.inactive {
+  opacity: 0.3;
+}
+
+/* SLICK SLIDE */
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px; 
+  background: black;
+}
+
+/* CAROUSEL */
+.carouselWrapper {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+}
+
+/* SLICK SLIDER */
+/*
+.slickSlide {
+	height: 100%;
+}
+.slick-slide img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+*/
+
+/* IMAGE CONTAINER */
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+/*
+  max-width: 70vh;
+  max-height: 70vh;
+*/
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;	
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;	
+}
+
+
+/* IMAGE BUTTON */
+.overlayButton {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.overlayButton:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+
+
+/* CAROUSEL ARROWS */
+.slickPrev,
+.slickNext {
+  z-index: 1;
+  background: #ccc;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.slickPrev:before,
+.slickNext:before {
+  opacity: 0.75;
+  color: #000;
+  font-size: 20px;
+}
+
+
+
+/* footer */
+.footerContainer {
+  flex: 0 1 auto;
+  padding: 20px;
+}

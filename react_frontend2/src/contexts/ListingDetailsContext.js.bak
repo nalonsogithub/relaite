@@ -1,0 +1,82 @@
+import React, { createContext, useState, useEffect } from 'react';
+
+// Create the context
+export const ListingDetailsContext = createContext();
+
+// Define the baseUrl for different environments
+const baseUrl = (() => {
+  const hostname = window.location.hostname;
+  if (hostname === 'localhost') {
+    return 'http://localhost:5000/api';
+  } else if (hostname === 'www.aigentTechnologies.com') {
+    return 'https://www.aigentTechnologies.com/api';
+  } else if (hostname === 'www.openhouseaigent.com') {
+    return 'https://www.openhouseaigent.com/api';
+  } else {
+    return 'https://hbb-zzz.azurewebsites.net/api'; // Default URL if no match
+  }
+})();
+
+// Default listing details (for fallback)
+const defaultListingDetails = {
+  listing_agent_name: 'John Doe',
+  listing_description: 'A beautiful 4-bedroom home with modern amenities and a spacious garden.',
+  listingImage: 'https://via.placeholder.com/600x400?text=Listing+Image',
+  logoImageOne: 'https://via.placeholder.com/200x100?text=Logo+One',
+  logoImageTwo: 'https://via.placeholder.com/200x100?text=Logo+Two',
+  listing_address: '19 Woekel Terrace, Methuen, MA 01844',
+};
+
+// ListingDetailsProvider component that provides listing details to its children
+export const ListingDetailsProvider = ({ children }) => {
+  const [listingDetails, setListingDetails] = useState(null); // Initially null, not default
+  const [loading, setLoading] = useState(false);  // Initially set loading to false for testing
+  const [error, setError] = useState(null);
+
+  // Fetch listing details from the backend (Flask API)
+  useEffect(() => {
+    const fetchListingDetails = async () => {
+      try {
+        // Make the API call to fetch listing details without relying on React state for `listing_id`
+        const response = await fetch(`${baseUrl}/listing-details`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'include', // Include credentials to ensure session variables are sent
+        });
+
+        // Check if the response is not ok (in this case we are expecting 200, even if listing is not found)
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || 'Failed to fetch listing details');
+        }
+
+        // Parse and set the data, including handling cases where `listingDetails` is null
+        const data = await response.json();
+        if (data.listingDetails === null) {
+          console.log('No listing details found. Setting default behavior.');
+        }
+        setListingDetails(data.listingDetails);
+        setLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    // Fetch the listing details only when the component is mounted
+    fetchListingDetails();
+  }, [baseUrl]);
+
+  // Monitor listingDetails for changes and log the value
+  useEffect(() => {
+//    console.log('Listing_Details updated:', listingDetails);
+  }, [listingDetails]); // Log when listingDetails changes
+
+  return (
+    <ListingDetailsContext.Provider value={{ listingDetails, loading, error }}>
+      {children}
+    </ListingDetailsContext.Provider>
+  );
+};

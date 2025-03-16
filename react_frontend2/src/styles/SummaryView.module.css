@@ -1,0 +1,76 @@
+/* SummaryView.module.css */
+.SummaryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.summaryHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.date {
+  font-size: 14px;
+  color: #666;
+}
+
+.summaryBackButtonContainer {
+  margin-bottom: 20px;
+}
+
+.backButton {
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.chatbotContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.summary {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.smallButton {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.smallButton:hover {
+  background-color: #3b4f77;
+}

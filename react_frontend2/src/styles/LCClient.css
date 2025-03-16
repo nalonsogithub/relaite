@@ -1,0 +1,119 @@
+/* LCClient.css */
+.live-chat-button {
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.live-chat-button:hover {
+    background-color: #3b4f77;
+}
+
+.chat-window {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-window-maximized {
+    width: 100vw !important;
+    height: 100vh !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    border-radius: 0 !important;
+    position: fixed !important;
+}
+
+.chat-window-normal {
+    width: 300px;
+    height: 400px;
+}
+
+.chat-header {
+    background-color: #4a6fa5;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: move;
+}
+
+.chat-window-maximized .chat-header {
+    cursor: default;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 5px;
+    transition: color 0.3s;
+}
+
+.chat-header button:hover {
+    color: #ddd;
+}
+
+.chat-log {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chat-log-maximized {
+    height: calc(100% - 100px);
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+    background-color: #3b4f77;
+}

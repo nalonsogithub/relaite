@@ -1,0 +1,90 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background-color: #fff;
+  padding: 10px 10px;
+  border-radius: 8px;
+  width: 70%; 
+  height: 50%; 
+  overflow-y: hidden;
+/*  position: relative;*/
+  
+  display: flex;
+  flex-direction: column;
+/*  justify-content: space-between; */
+}
+
+.ChatBotContainer {
+  height: 85%; 
+  width: 100%; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.headerContainer {
+  display: flex;
+  max-height: 20%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.leftLogo,
+.rightLogo {
+  width: 10%; 
+/*  width: 70px; */
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  max-width: 70px;
+  max-height: 70px; 
+}
+
+.titleContainer {
+  width: 80%;
+/*  flex-grow: 1;*/
+  text-align: center;
+}
+
+.title {
+  font-size: 20px; 
+  font-weight: bold;
+  margin: 0;
+}
+
+
+/* Larger smartphones */
+@media (max-width: 767px) {
+  .title {
+    font-size: 16px;
+  }
+  .logo {
+    max-width: 60px;
+    max-height: 60px; 
+  }
+}
+
+
+/* Small mobile devices */
+@media (max-width: 400px) {
+  .title {
+    font-size: 12px;
+  }
+	
+}

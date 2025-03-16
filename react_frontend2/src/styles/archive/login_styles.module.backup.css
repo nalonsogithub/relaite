@@ -1,0 +1,268 @@
+@charset "utf-8";
+/* CSS Document */
+.root-container {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.rootContainer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Take full viewport height */
+    padding: 20px; /* Add padding around the edges */
+}
+.main_container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center; 
+    width: 70%;
+	margin-top: 0;
+	padding-top: 0;
+	
+}
+.logoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.heading_container {
+	flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+    height: 55px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+	text-align: center;
+}
+
+.leftLogo {
+    justify-content: flex-start;
+}
+
+.rightLogo {
+    justify-content: flex-end;
+}
+.logo {
+	max-width: 100px;
+    display: block; /* Needed if the logo is an img element */
+    margin: 0 auto; /* Centers the logo within its container */
+}
+.login_container {
+	padding-top: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+    width: 100%; 
+}
+#first-heading_container {
+	height: 20px;
+}
+
+#heading {
+    height: auto;
+    width: 70%;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: x-large;
+}
+#welcome {
+    width: 70%;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    text-shadow: 0px 0px #000000;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+#welcome_message {
+    width: 50%;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    height: 50%;
+}
+
+.container {
+    width: 70%;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    text-shadow: 0px 0px #000000;
+    text-align: center;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: flex-start;
+}
+
+.bottompanel {
+    height: auto;
+    width: 70%;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: x-large;
+}
+
+
+
+
+
+.input-group {
+    width: 100%; 
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    width: 100%; 
+    margin: 0; 
+    padding-right: 10px; 
+    text-align: left; 
+}
+
+.input-group input {
+    width: 100%; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}		
+
+
+
+.login {
+    flex: 1;
+    padding: 20px;
+    height: 300px;
+    width: 45%;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+
+.centered-container_login {
+    width: 100%; 
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+}		
+
+
+.submitinfo button {
+    width: 50%; 
+    padding: 10px;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto; 
+    display: block; 
+}
+
+.submitinfo button:hover {
+    background-color: #0056b3;
+    color: #FFFFFF;
+}		
+.submitinfo {
+    color: #000000;
+    width: 50%;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}	
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    color: #000000;
+    align-self: center;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4a6fa5;
+}
+
+.loginContainer {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Horizontal offset, vertical offset, blur radius, color */
+    padding: 20px;
+    border-radius: 8px; /* Optional: adds rounded corners to your form */
+}
+
+
+.actionbutton #loadoldchat button {
+}
+
+
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    padding: 20px; 
+}
+
+.rootContainer {
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+    height: 100vh; 
+    align-items: center; 
+}
+
+
+.inputGroup input {
+    width: 90%; /* Or another specific width that fits your design */
+    padding: 8px 12px;
+    border: 1px solid #ccc; /* Example border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Consistent font size */
+    margin: 0 auto; /* Centers the input within the input group */
+    display: block; /* Makes input block level to fill width */
+}
+

@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+/*  height: 100vh; */
+  width: 100%;    
+  overflow-y: auto;
+}
+
+.headerContainer {
+  width: 100%;
+  height: 10%; 
+  background-color: #f8f9fa; 
+  display: flex;
+  justify-content: center; /* Center the header component horizontally */
+  align-items: center; /* Align vertically within the container */
+}
+
+.headerComponentContainer {
+  width: 50%; 
+  display: flex;
+  justify-content: space-between; /* Space the left, center, and right containers */
+  align-items: center; /* Vertically align content within the header */
+}
+
+.header {
+  flex-grow: 1; /* Center container should grow and take up available space */
+  text-align: center; /* Center the content inside the header */
+}
+
+.header_left_container {
+  flex-basis: auto; /* Automatically size based on content */
+  text-align: left; /* Align content to the left */
+}
+
+.header_right_container {
+  flex-basis: auto; /* Automatically size based on content */
+  text-align: right; /* Align content to the right */
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.chatbotContainer, .chatbotContainer90 {
+  width: 100%;
+  min-height: 45%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; 
+  margin-bottom: 10px;
+  
+}
+
+.contactContainer {
+	
+}
+
+.chatbotContainer90 {
+	height: 90%;
+}
+
+.chatbotContainer {
+  overflow: auto; 
+}
+
+
+
+
+
+
+.returnButton,
+.toggleButton {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit; 
+  color: #007bff; 
+  transition: color 0.3s ease; 
+}
+
+.returnButton:hover,
+.toggleButton:hover {
+  color: #0056b3; 
+}
+
+.returnButton {
+margin-right: auto;	
+/*
+  position: absolute;
+  left: 0; 
+*/
+}
+
+.toggleButton {
+	margin-right: auto;
+/*
+  position: absolute;
+  right: 0; 
+*/
+}
+
+/* Responsive Design Adjustments */
+@media only screen and (max-width: 768px) {
+	.headerComponentContainer {
+  		width: 90%; 
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.headerComponentContainer {
+  		width: 90%; 
+	}
+}
+

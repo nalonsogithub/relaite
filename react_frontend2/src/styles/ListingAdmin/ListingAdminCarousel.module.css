@@ -1,0 +1,158 @@
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: #4a6fa5;
+  margin-bottom: 20px;
+}
+
+.carousel-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tile-container {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  background: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.tile-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-button {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background: #ff0000;
+}
+
+.tile-image-preview {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-preview {
+  width: 100%;
+  height: auto;
+}
+
+.file-input {
+  margin-top: 10px;
+}
+
+.tile-description {
+  margin: 10px 0;
+}
+
+.tile-description textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+}
+
+.back-button {
+  width: 150px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #3b4f77;
+}
+.navButtonContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+.form-container {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-input {
+  width: 90%;
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+
+
+.short-input {
+  width: 50%; /* Adjust width for smaller inputs */
+}
+
+.custom-file-upload {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.custom-file-upload:hover {
+  background-color: #3b4f77;
+}
+
+.file-input {
+  display: none;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image-box {
+  border: 2px dashed #4a6fa5;
+  padding: 15px;
+  width: 250px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+  margin-bottom: 10px;
+}

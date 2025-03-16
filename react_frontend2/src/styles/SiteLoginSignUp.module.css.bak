@@ -1,0 +1,167 @@
+/* Main container for the login/signup form */
+.siteContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+/* Form container */
+.siteFormBox {
+  background: white;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Header title */
+.siteFormBox h2 {
+  font-size: 1.8em;
+  color: #4a6fa5;
+  margin-bottom: 20px;
+}
+
+/* Input field styling */
+.siteInputField {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Submit button */
+.siteSubmitButton {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+/* Submit button hover effect */
+.siteSubmitButton:hover {
+  background-color: #3b4f77;
+}
+
+/* Text for toggling between login and sign-up */
+.siteToggleText {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 15px;
+}
+
+.siteToggleText span {
+  color: #4a6fa5;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.siteToggleText span:hover {
+  text-decoration: underline;
+}
+
+/* Forgot password text */
+.siteForgotPasswordText {
+  font-size: 0.9em;
+  color: #4a6fa5;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.siteForgotPasswordText:hover {
+  text-decoration: underline;
+}
+
+/* Radio button group for buyer's agent question */
+.siteRadioGroup {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.siteInstruction {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.siteRadioContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+.siteRadioItem {
+  display: flex;
+  align-items: center;
+}
+
+.siteRadioItem input[type='radio'] {
+  margin-right: 5px;
+}
+
+.siteRadioItem label {
+  font-size: 14px;
+}
+
+/* Login status message styling */
+.siteLoginStatus {
+  background-color: rgba(217, 83, 79, 0.1); /* Light red background with slight transparency */
+  border: 1px solid #d9534f; /* Border matching the text color */
+  border-radius: 5px; /* Rounded corners */
+  color: #d9534f; /* Text color */
+  padding: 8px 12px; /* Padding for better spacing */
+  font-size: 14px; /* Smaller, more subtle font size */
+  display: inline-block; /* Makes the message fit to its content */
+  max-width: 80%; /* Keep the message from stretching too wide */
+  margin: 0 auto; /* Center the message */
+  animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+
+.loginmessages {
+  text-align: center; /* Center the text */
+  margin-top: 15px; /* Add some space between the message and other elements */
+  color: #d9534f; /* Use a professional red color */
+}
+
+.back-button {
+  width: 150px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #3b4f77;
+}
+.navButtonContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

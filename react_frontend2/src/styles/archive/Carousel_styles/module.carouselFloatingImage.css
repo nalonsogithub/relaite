@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+.carousel_floating_image {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  border-radius: 8px; /* Rounded corners for the image */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+  display: inline-block;
+  width: auto;
+}
+
+.carousel_floating_image:hover {
+  transform: translateY(-10px); /* Floating effect on hover */
+}

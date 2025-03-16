@@ -1,0 +1,156 @@
+/* Welcome.module.css */
+/* Main page wrapper */
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+/*  padding: 5px;*/
+}
+
+.welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  margin: 0px auto; 
+  padding: 5px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  max-width: 600px; 
+}
+
+.welcomeContainer {
+  width: 100%; 
+  text-align: center;
+}
+
+.centeredContainer {
+  max-width: 100%; 
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+
+/* Individual logo container */
+/* Logo container adjustments */
+.welcomelogoContainer {
+  display: flex;
+  justify-content: space-between; /* Ensure the two logo containers are spaced apart */
+  align-items: flex-start; /* Align items at the top of the container */
+  margin: 15px 0;
+  gap: 30px; /* Optional: Add spacing between the two containers */
+  position: relative; /* Enable precise positioning if needed */
+  width: 100%;
+}
+
+/* Right logo container */
+.logoContainerRight {
+  display: flex;
+  justify-content: flex-end; /* Push content to the right */
+  align-items: flex-start; /* Align content to the top */
+  padding: 5px;
+  text-align: right;
+  max-width: 50%;
+}
+
+/* Left logo container */
+.logoContainerLeft {
+  display: flex;
+  justify-content: flex-start; /* Push content to the left */
+  align-items: flex-start; /* Align content to the top */
+  padding: 5px;
+  text-align: left;
+  max-width: 50%;
+}
+
+.logoImage {
+  display: block; /* Ensure the image is treated like a block element */
+  max-width: 100%; /* Ensure the image never overflows its container width */
+  max-height: 50px; /* Limit image height */
+  margin: 0; /* Remove extra margins */
+  padding: 0; /* Remove padding from the image itself */
+  object-fit: contain; /* Keep the image scaled to fit within its dimensions */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+
+
+.welcomeimageContainer {
+  margin: 20px 0;
+}
+
+.welcomestyledImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+
+.infoBoxContainer {
+/*  background-color: #f9f9f9; */
+/*  border: 1px solid #e0e0e0; */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  padding: 15px; /* Add spacing inside the container */
+  margin: 10px auto; /* Center and add vertical spacing */
+  max-width: 500px; /* Limit the width for a clean layout */
+/*  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+  text-align: left; /* Align text to the left */
+}
+
+.infoText {
+  font-family: 'Arial', sans-serif; /* Ensure a clean, readable font */
+  font-size: 16px; /* Set a comfortable font size */
+  color: #333; /* Dark gray text for good readability */
+  margin-bottom: 10px; /* Space between paragraphs */
+  line-height: 1.5; /* Increase line height for better readability */
+}
+
+.infoText strong {
+  color: #0056b3; /* Accent color for headings (blue) */
+}
+
+
+
+.bubbleGameContainer {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the bubble game container */
+}
+
+.cbg_mainContainer {
+  background-color: white;
+  border-radius: 10px;
+/*  padding: 20px;*/
+/*  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+  max-width: 600px; 
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cbg_gameSection {
+  padding: 5px; 
+  margin-top: 5px;
+}
+
+.loginSignupContainer {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+	
+}
+.CorporateBannerContainer {
+	width: 100%;
+}
+
+

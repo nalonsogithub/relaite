@@ -1,0 +1,36 @@
+.cbg_mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cbg_header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cbg_introSection {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cbg_gameSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cbg_footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}

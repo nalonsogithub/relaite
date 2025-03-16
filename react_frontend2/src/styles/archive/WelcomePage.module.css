@@ -1,0 +1,207 @@
+/* Welcome.module.css */
+/* Main page wrapper */
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  margin: 30px auto; 
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  max-width: 600px; 
+}
+
+.welcomeContainer {
+  width: 90%; 
+  text-align: center;
+}
+
+.centeredContainer {
+  max-width: 90%; 
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.welcomelogoContainer {
+  max-height: 100px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.leftLogoContainer, .rightLogoContainer {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.leftLogoContainer{
+	justify-content: left;
+}
+.rightLogoContainer{
+	justify-content: right;
+}
+
+.logoImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.welcomeimageContainer {
+  margin: 20px 0;
+}
+
+.welcomestyledImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+.infoBoxContainer {
+  margin-top: 30px;
+  width: 90%;
+  display: flex;
+  justify-content: center; /* Center the info box container */
+}
+
+.infoBox {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  max-width: 500px;
+  width: 100%; /* Ensure the infoBox takes up full width of the parent container */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inputField {
+  width: 100%; /* Make input fields take up the full width */
+  max-width: 400px; /* Set a max-width to keep inputs within bounds */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.signupButtonContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.signupButton,
+.proceedButton {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px; /* Slightly smaller font size */
+  transition: background-color 0.3s;
+}
+
+.signupButton:hover,
+.proceedButton:hover {
+  background-color: #3b4f77; 
+}
+
+/* Buttons */
+.welcomebuttonContainer {
+  width: 90%;
+  margin-top: 20px;
+}
+
+.welcomelink {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.welcomelink:hover {
+  background-color: #0056b3;
+}
+
+
+.bubbleGameContainer {
+  margin-top: 30px;
+  width: 90%;
+  display: flex;
+  justify-content: center; /* Center the bubble game container */
+}
+
+.cbg_mainContainer {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  max-width: 600px; 
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cbg_gameSection {
+  padding: 20px; 
+  margin-top: 20px;
+}
+
+.bayn_radioGroup {
+  margin-top: 20px;
+  text-align: center; /* Center the entire group */
+}
+
+.bayn_instruction {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.bayn_radioContainer {
+  display: flex;
+  justify-content: center; /* Center the radio button group */
+  gap: 20px; /* Space between the Yes and No options */
+  margin: 10px 0;
+}
+
+.bayn_radioItem {
+  display: flex;
+  align-items: center;
+}
+
+.bayn_radioItem input[type="radio"] {
+  margin-right: 5px;
+}
+
+.bayn_radioItem label {
+  font-size: 14px;
+}
+

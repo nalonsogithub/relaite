@@ -1,0 +1,187 @@
+/* GENERAL STYLES */
+/* Container for the entire page */
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f7f6;
+  padding: 20px;
+}
+/* Box Container for the Create Listing Component */
+.createListingBox {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.nextButton {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+.nextButton:hover {
+  background: #0056b3;
+}
+
+
+
+/* STEP 1 */
+/* Centered Button Row */
+.step1_buttonRow {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+/* Modal Preformatted Text Container */
+.step1_textContainer {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  max-height: 150px; /* Limit the height to show 8 lines */
+  overflow-y: auto; /* Keep verticle scrolling */
+  white-space: pre-wrap; /* Preserve new lines and wrap text */
+  overflow-wrap: break-word; /* Break words to prevent overflow */  
+}
+/* Modal Overlay */
+.step1_modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Modal Content */
+.step1_modalContent {
+  background: #fff;
+  padding: 20px;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  position: relative;
+  overflow: hidden; 
+}
+/* Close Button */
+.step1_closeButton {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+/* Instruction Text Styling */
+.step1_modalPreformatted {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-y: auto; /* Keep horizontal scrolling */
+  white-space: pre-wrap; /* Preserve new lines and wrap text */
+  overflow-wrap: break-word; /* Break words to prevent overflow */  
+}
+.step1_instructionText {
+  margin-bottom: 20px;
+}
+/* Input Container */
+.step1_inputContainer {
+  margin: 20px 0;
+}
+.step1_inputLabel {
+  display: block;
+  margin-bottom: 5px;
+}
+.step1_inputField {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+/* View Button */
+.step1_viewButton {
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.step1_viewButton:hover {
+  background: #0056b3;
+}
+/* Copy Button */
+.step1_copyButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.step1_copyButton:hover {
+  background: #0056b3;
+}
+.step1_copied {
+  background: #0056b3;
+  color: #fff;
+}
+
+
+
+
+
+
+
+/* STEP 2 */
+.step2_sectionBox {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+.step2_logoPreview {
+  max-height: 100px;
+  margin-top: 10px;
+}
+.step2_agentPreview {
+  max-width: 200px;
+  height: 200px;
+  margin-top: 10px;
+}
+.step2_housePreview {
+  max-width: 100%;
+  margin-top: 10px;
+}
+.step2_textArea, .step2_inputField {
+  min-width: 95%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+
+
+

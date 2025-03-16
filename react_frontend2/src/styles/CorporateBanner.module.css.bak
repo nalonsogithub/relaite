@@ -1,0 +1,32 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f9fc; 
+
+  padding: 5px 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leftDiv,
+.rightDiv {
+  flex: 1; /* Ensure left and right divs are the same size */
+}
+
+.middleDiv {
+  flex: 2; /* Allow the middle div to take up more space */
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333; /* Adjust text color */
+}
+
+.rightDiv {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon {
+  max-width: 50px; /* Adjust size for the icon */
+  max-height: 50px; /* Adjust size for the icon */
+}

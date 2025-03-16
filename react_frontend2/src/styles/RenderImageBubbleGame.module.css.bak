@@ -1,0 +1,56 @@
+/* Main Container for the Component */
+.bg_mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Text Container Above and Below the Game */
+.bg_textContainer {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Game Wrapper Container */
+.bg_gameWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Floating Container Inside the Game Wrapper */
+.bg_floatingContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Center Container to Hold Flash Screen */
+.bg_centerContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1; /* Ensure the flash screen is above other elements */
+}
+
+/* Floating Container for the Flash Screen */
+.bg_floatingContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+/*  background-color: rgba(0, 0, 0, 0.7); */
+  z-index: 1000; /* High z-index to overlay everything */
+}

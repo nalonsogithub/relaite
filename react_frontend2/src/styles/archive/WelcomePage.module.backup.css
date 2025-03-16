@@ -1,0 +1,138 @@
+.pageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Adjust as needed */
+}
+
+.welcomeContainer {
+  width: 50%;
+  padding: 20px;
+  background-color: white; /* Ensures the background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for better visibility */
+  border-radius: 8px; /* Optional: rounds the corners */
+}
+
+@media (max-width: 768px) {
+  .welcomeContainer {
+    width: 100%; /* Change to 100% width for mobile devices */
+  }
+}
+
+
+.centeredContainer {
+  text-align: center;
+}
+
+.welcomelogoContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logoContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.logoImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.welcomeimageContainer {
+  margin: 20px 0;
+}
+
+.welcomestyledImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.welcomebuttonContainer {
+  margin: 20px 0;
+}
+
+.welcomelink {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.welcomelink:hover {
+  background-color: #0056b3;
+}
+
+.infoBoxContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+	
+  width: 45%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  box-sizing: border-box;
+}
+
+.inputField {
+  display: block;
+  width: calc(100% - 40px); /* 100% width minus 20px padding on each side */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.questionsView {
+  margin-top: 20px;
+}
+
+.questionBox {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.answersContainer {
+  margin-top: 10px;
+}
+
+.answerOption {
+  margin-bottom: 10px;
+}
+
+.answerOption input {
+  margin-right: 10px;
+}
+
+.proceedButton, .signupButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4a6fa5;
+  color: white;
+  cursor: pointer;
+}
+
+.proceedButton:hover, .signupButton:hover {
+  background-color: #3b4f77;
+}

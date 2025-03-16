@@ -1,0 +1,86 @@
+.carouselContainer {
+  background-color: white;
+/*  padding: 20px;*/
+  position: relative;
+  height: 100%;
+  width: 100%;
+	overflow: hidden;
+}
+
+.carouselItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+  width: 100%;
+}
+
+.imageWrapper {
+  max-width: 100%;
+  max-height: 100%;
+  width: 50%; 
+/*  height: auto;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+	margin: 0 auto;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.carousel .control-dots {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel .thumb {
+  border: 1px solid #ccc;
+}
+
+.carousel .control-arrow {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.carousel .dot {
+  background: #ccc;
+}
+
+.carousel .dot.selected {
+  background: #000;
+}
+
+.carousel .carousel-slider {
+  overflow: visible; 
+}
+
+.carousel .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+
+.transparentButton {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.5); /* Mostly transparent */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.transparentButton:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Less transparent on hover */
+}
+

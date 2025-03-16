@@ -1,0 +1,6 @@
+.leaflet-container {
+  width: 500px;  /* You can also use percentages like 80% */
+  height: 300px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
