@@ -189,7 +189,7 @@ def get_db_connection():
             host=os.getenv("DB_HOST"),
             port=os.getenv("DB_PORT")
         )
-        # print("Database connection successful!")
+        print("Database connection successful!")
         return connection
     except Exception as e:
         print("Error connecting to the database:", e)
@@ -1500,6 +1500,9 @@ def login_new():
 #         conn.close()
 @app.route('/api/check-login', methods=['GET'])
 def check_login():
+    conn = None  # Ensure conn is initialized
+    cursor = None  # Ensure cursor is initialized
+
     try:
         print("🔥 [DEBUG] check-login: API called")  # Confirm function call
 
@@ -1531,8 +1534,12 @@ def check_login():
                 "email": None
             }), 200
 
-        # ✅ Fetch user info from the database
+        # Establish a database connection
         conn = get_db_connection()
+        if not conn:
+            app.logger.error("Database connection failed")
+            return jsonify({"error": "Database connection failed"}), 500
+
         cursor = conn.cursor()
         sql = """
         SELECT userid, first_name, last_name, email, admin, agent
@@ -1575,9 +1582,11 @@ def check_login():
         return jsonify({"error": str(e)}), 500
 
     finally:
-        if cursor:
+        # Ensure cursor is closed only if it was initialized
+        if cursor is not None:
             cursor.close()
-        if conn:
+        # Ensure connection is closed only if it was initialized
+        if conn is not None:
             conn.close()
 
 
