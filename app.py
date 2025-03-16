@@ -2950,4 +2950,4 @@ def get_statistics():
         conn.close()
 if __name__ == '__main__':
     # print("[DEBUG] Registered Routes:", app.url_map)
-    app.run(debug=True)
+    app.run(debug=False)
