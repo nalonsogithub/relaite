@@ -82,30 +82,46 @@
 	  };
 
 	  // Function to fetch the listing ID from the session using the baseUrl
-	  const fetchListingId = async () => {
-		try {
-		  const response = await axios.get(`${baseUrl}/get_listing_id`);
-		  const sessionListingId = response.data.listing_id || ""; // Get listing_id from response or empty string if not found
-		  const isIDFromURL = response.data.id_from_url === true;  // Ensure it's a boolean
+//	  const fetchListingId = async () => {
+//		try {
+//		  const response = await axios.get(`${baseUrl}/get_listing_id`);
+//		  const sessionListingId = response.data.listing_id || ""; // Get listing_id from response or empty string if not found
+//		  const isIDFromURL = response.data.id_from_url === true;  // Ensure it's a boolean
+//
+//
+//		  // Update the listingId state only if it's different to avoid unnecessary updates
+//		  if (!_.isEqual(sessionListingId, listingId)) {
+//			setListingId(sessionListingId);
+//			setIdFromURL(isIDFromURL);
+//		  }
+//
+//		  // Determine if a listing ID was found
+//		  const found = sessionListingId !== "";
+//		  setSiteListingIdFound(found); // Set the new state variable
+//		  return { listingId: sessionListingId, siteListingIdFound: found, idFromURL: isIDFromURL }; // Return both variables
+//		} catch (error) {
+//		  console.error('Error fetching listing ID from session:', error);
+//		  return { listingId: "", siteListingIdFound: false, idFromURL: false }; // Return default values on error
+//		}
+//	  };
 
-//		  console.log('Fetched listing ID from session:', sessionListingId);
-//		  console.log('Fetched ID from URL:', isIDFromURL);
+        const fetchListingId = async () => {
+          try {
+            const response = await axios.get(`${baseUrl}/get_listing_id`);
+            const sessionListingId = response.data.listing_id || "";
+            const isIDFromURL = response.data.id_from_url === true;
 
-		  // Update the listingId state only if it's different to avoid unnecessary updates
-		  if (!_.isEqual(sessionListingId, listingId)) {
-			setListingId(sessionListingId);
-			setIdFromURL(isIDFromURL);
-		  }
+            setListingId(sessionListingId);
+            setIdFromURL(isIDFromURL);
+            setSiteListingIdFound(!!sessionListingId);
 
-		  // Determine if a listing ID was found
-		  const found = sessionListingId !== "";
-		  setSiteListingIdFound(found); // Set the new state variable
-		  return { listingId: sessionListingId, siteListingIdFound: found, idFromURL: isIDFromURL }; // Return both variables
-		} catch (error) {
-		  console.error('Error fetching listing ID from session:', error);
-		  return { listingId: "", siteListingIdFound: false, idFromURL: false }; // Return default values on error
-		}
-	  };			  
+            return { listingId: sessionListingId, siteListingIdFound: !!sessionListingId, idFromURL: isIDFromURL };
+          } catch (error) {
+            console.error("Error fetching listing ID from session:", error);
+            return { listingId: "", siteListingIdFound: false, idFromURL: false };
+          }
+        };
+
 
 
 	  const siteSignup = async (userDetails) => {

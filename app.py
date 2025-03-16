@@ -1197,42 +1197,86 @@ def send_email_via_acs(to_email, subject, content):
     except Exception as e:
         print(f"Failed to send email: {str(e)}")
 
+# @app.route("/", defaults={"path": ""})
+# @app.route("/<path:path>", strict_slashes=False)
+# def serve(path=""):
+#     try:
+#         # Step 1: Log incoming requests
+#         print(f"[DEBUG] serve(): MAIN: Query parameters: {request.args}")
+#
+#         mid = request.args.get("listing_id")
+#         if mid:
+#             print(f"[DEBUG] serve(): listing_id FOUND -> {mid}, checking for active listing_id")
+#             lid = get_active_listing_id(mid)
+#             if len(lid) > 0:
+#                 print(f"[DEBUG] serve(): Saving Master Listing ID, Listing_id and ID_FROM_URL")
+#                 set_session_variable('MASTER_LISTING_ID', mid)
+#                 set_session_variable('LISTING_ID', lid)
+#                 set_session_variable('ID_FROM_URL', True)
+#             else:
+#                 print(f"[DEBUG] serve(): Now Active Listing ID found")
+#         else:
+#             hold = 'hold'
+#             print("[DEBUG] serve(): listing_id NOT FOUND in request")
+#
+#         # Step 2: Serve static files if they exist
+#         file_path = safe_join(app.static_folder, path)
+#         if path and os.path.exists(file_path):
+#             # print(f"DEBUG: MAIN: Serving static file: {file_path}")
+#             return send_from_directory(app.static_folder, path)
+#
+#         # Step 3: Fallback to React's index.html for unmatched paths
+#         # print("DEBUG: MAIN: Path not found or empty. Serving index.html.")
+#         return send_from_directory(app.static_folder, 'index.html')
+#
+#     except Exception as e:
+#         # Catch unexpected errors
+#         # print(f"DEBUG: Unexpected error: {e}")
+#         return "An error occurred while processing your request.", 500
+
 @app.route("/", defaults={"path": ""})
 @app.route("/<path:path>", strict_slashes=False)
 def serve(path=""):
     try:
-        # Step 1: Log incoming requests
+        # 🔹 Log incoming request
         print(f"[DEBUG] serve(): MAIN: Query parameters: {request.args}")
 
-        mid = request.args.get("listing_id")
-        if mid:
-            print(f"[DEBUG] serve(): listing_id FOUND -> {mid}, checking for active listing_id")
-            lid = get_active_listing_id(mid)
-            if len(lid) > 0:
-                print(f"[DEBUG] serve(): Saving Master Listing ID, Listing_id and ID_FROM_URL")
-                set_session_variable('MASTER_LISTING_ID', mid)
-                set_session_variable('LISTING_ID', lid)
-                set_session_variable('ID_FROM_URL', True)
-            else:
-                print(f"[DEBUG] serve(): Now Active Listing ID found")
-        else:
-            hold = 'hold'
-            print("[DEBUG] serve(): listing_id NOT FOUND in request")
+        # ✅ Check if 'listing_id' exists in the URL
+        listing_id = request.args.get("listing_id")
 
-        # Step 2: Serve static files if they exist
+        if listing_id:
+            print(f"[DEBUG] serve(): listing_id FOUND -> {listing_id}, checking for active listing_id")
+
+            # ✅ Find active listing ID in the database
+            active_listing_id = get_active_listing_id(listing_id)
+
+            if active_listing_id:
+                print(f"[DEBUG] serve(): Saving Master Listing ID and Listing_id to session")
+
+                # ✅ Store in session
+                set_session_variable("MASTER_LISTING_ID", listing_id)
+                set_session_variable("LISTING_ID", active_listing_id)
+                set_session_variable("ID_FROM_URL", True)
+
+                return redirect("/WelcomePage")  # ✅ Redirect user to WelcomePage
+            else:
+                print(f"[DEBUG] serve(): No Active Listing ID found")
+        else:
+            print("[DEBUG] serve(): No listing_id found in URL")
+
+        # 🔹 Serve static files if they exist
         file_path = safe_join(app.static_folder, path)
         if path and os.path.exists(file_path):
-            # print(f"DEBUG: MAIN: Serving static file: {file_path}")
             return send_from_directory(app.static_folder, path)
 
-        # Step 3: Fallback to React's index.html for unmatched paths
-        # print("DEBUG: MAIN: Path not found or empty. Serving index.html.")
-        return send_from_directory(app.static_folder, 'index.html')
+        # 🔹 Serve React's index.html for unmatched paths
+        return send_from_directory(app.static_folder, "index.html")
 
     except Exception as e:
-        # Catch unexpected errors
-        # print(f"DEBUG: Unexpected error: {e}")
+        print(f"[ERROR] serve(): Unexpected error: {e}")
         return "An error occurred while processing your request.", 500
+
+
 # Route to catch `/listings` subdirectory and serve React's index.html
 @app.route("/listings")
 def serve_listings():
