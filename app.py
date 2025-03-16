@@ -5,6 +5,7 @@ from flask import session
 from flask_cors import CORS
 from flask import stream_with_context, Response
 from flask import send_from_directory
+from flask import redirect
 import json
 import datetime
 import time
@@ -31,7 +32,7 @@ import traceback
 from flask import Flask, request, jsonify
 from werkzeug.security import generate_password_hash
 from werkzeug.utils import safe_join
-
+import logging
 
 # TURN OFF COM AND GPT RESPONSE
 no_com = False
@@ -40,6 +41,11 @@ no_gpt = False
 # load_dotenv()
 
 app = Flask(__name__, static_folder='react_frontend2/build', static_url_path='/')
+# Set up logging for Azure
+if not app.debug:  # Only configure logging if NOT in debug mode
+    gunicorn_logger = logging.getLogger("gunicorn.error")
+    app.logger.handlers = gunicorn_logger.handlers
+    app.logger.setLevel(logging.INFO)  # Set logging level to INFO
 
 app.secret_key = os.environ.get('SECRET_FLASK_KEY')
 
@@ -1572,11 +1578,6 @@ def check_login():
         if conn:
             conn.close()
 
-@app.route('/api/test', methods=['GET'])
-def test_route():
-    print('[DEBUG] in TEST')
-    return jsonify({"message": "Flask is working!"}), 200
-
 
 @app.route('/api/logout', methods=['POST'])
 def logout():
@@ -2904,6 +2905,11 @@ def update_user_admin_rights():
         # Ensure resources are closed
         cursor.close()
         conn.close()
+
+@app.route('/api/test', methods=['GET'])
+def test_route():
+    app.logger.info("[DEBUG] /api/test route was hit")
+    return jsonify({"message": "Flask is working!"}), 200
 
 @app.route('/api/get_statistics', methods=['GET'])
 def get_statistics():
