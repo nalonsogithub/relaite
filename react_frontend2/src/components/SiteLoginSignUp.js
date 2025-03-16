@@ -365,9 +365,6 @@ const handleNavButtonClick = async () => {
 					<span onClick={() => { resetSignupState(); setIsSiteSignUp(true); }}>
 					  Sign Up
 					</span>
-					<span onClick={() => { resetSignupState(); setIsAnonSignup(true); }}>
-					  Anonymous Signup
-					</span>
 
 				</p>
 

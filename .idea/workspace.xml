@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b618a4c-12fd-4569-b56e-e2d827122b53" name="Changes" comment="Singup page by default">
-      <change afterPath="$PROJECT_DIR$/react_frontend2/src/utils/navigationUtils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/nf_flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nf_flask.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_frontend2/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/react_frontend2/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_frontend2/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react_frontend2/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_frontend2/build/static/css/main.2f8a790b.css" beforeDir="false" afterPath="$PROJECT_DIR$/react_frontend2/build/static/css/main.2f8a790b.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_frontend2/build/static/js/453.3bd7fa06.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/react_frontend2/build/static/js/453.3bd7fa06.chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_frontend2/build/static/js/main.f1798461.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_frontend2/build/static/js/main.f1798461.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_frontend2/build/static/js/main.f1798461.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_frontend2/build/static/media/slick.2630a3e3eab21c607e21.svg" beforeDir="false" afterPath="$PROJECT_DIR$/react_frontend2/build/static/media/slick.2630a3e3eab21c607e21.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_frontend2/src/components/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react_frontend2/src/components/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_frontend2/src/components/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react_frontend2/src/components/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react_frontend2/src/contexts/SiteAuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/react_frontend2/src/contexts/SiteAuthContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react_frontend2/src/components/SiteLoginSignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/react_frontend2/src/components/SiteLoginSignUp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
