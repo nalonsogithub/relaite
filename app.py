@@ -1572,6 +1572,10 @@ def check_login():
         if conn:
             conn.close()
 
+@app.route('/api/test', methods=['GET'])
+def test_route():
+    return jsonify({"message": "Flask is working!"}), 200
+
 
 @app.route('/api/logout', methods=['POST'])
 def logout():
