@@ -43,9 +43,9 @@ no_gpt = False
 app = Flask(__name__, static_folder='react_frontend2/build', static_url_path='/')
 # Set up logging for Azure
 # 🔹 Force Flask to use Gunicorn's logging
-gunicorn_logger = logging.getLogger("gunicorn.error")
-app.logger.handlers = gunicorn_logger.handlers
-app.logger.setLevel(logging.INFO)  # Always log INFO level and above
+# gunicorn_logger = logging.getLogger("gunicorn.error")
+# app.logger.handlers = gunicorn_logger.handlers
+# app.logger.setLevel(logging.INFO)  # Always log INFO level and above
 
 
 
@@ -2910,7 +2910,8 @@ def update_user_admin_rights():
 
 @app.route('/api/test', methods=['GET'])
 def test_route():
-    app.logger.info("[DEBUG] /api/test route was hit")
+    print("[DEBUG] /api/test route was hit")
+    # app.logger.info("[DEBUG] /api/test route was hit")
     return jsonify({"message": "Flask is working!"}), 200
 
 @app.route('/api/get_statistics', methods=['GET'])
@@ -2952,6 +2953,6 @@ def get_statistics():
         conn.close()
 if __name__ == '__main__':
     print("[DEBUG] Registered Routes:", app.url_map)
-    # app.run(debug=False)
-    port = int(os.environ.get('PORT', 8000))  # Ensure it runs on 8000
-    app.run(host='0.0.0.0', port=port, debug=False)
+    app.run(debug=False)
+    # port = int(os.environ.get('PORT', 8000))  # Ensure it runs on 8000
+    # app.run(host='0.0.0.0', port=port, debug=False)
