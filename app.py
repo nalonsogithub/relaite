@@ -1574,6 +1574,7 @@ def check_login():
 
 @app.route('/api/test', methods=['GET'])
 def test_route():
+    print('[DEBUG] in TEST')
     return jsonify({"message": "Flask is working!"}), 200
 
 
