@@ -1493,16 +1493,24 @@ def login_new():
 @app.route('/api/check-login', methods=['GET'])
 def check_login():
     try:
-        # Establish a database connection
-        conn = get_db_connection()
-        if not conn:
-            return jsonify({"error": "Database connection failed"}), 500
+        print("🔥 [DEBUG] check-login: API called")  # Confirm function call
 
-        cursor = conn.cursor()
+        # Check if USER_ID exists in the session before trying to retrieve it
+        if 'USER_ID' not in session:
+            print("⚠️ [DEBUG] USER_ID not found in session")
+            return jsonify({
+                "isLoggedIn": False,
+                "isAdmin": False,
+                "isAgent": False,
+                "user_id": None,
+                "first_name": None,
+                "last_name": None,
+                "email": None
+            }), 200  # Gracefully return a valid JSON response
 
-        # Retrieve the user_id from the session
+        # Retrieve USER_ID if it exists
         user_id = retrieve_session_variable('USER_ID')
-        # print(f"[DEBUG] check_login: USER_ID = {user_id}")
+        print(f"🔍 [DEBUG] Retrieved USER_ID: {user_id}")
 
         if not user_id:
             return jsonify({
@@ -1515,22 +1523,14 @@ def check_login():
                 "email": None
             }), 200
 
-        # ✅ FIX: Use `%s` instead of `?` for PostgreSQL
+        # ✅ Fetch user info from the database
+        conn = get_db_connection()
+        cursor = conn.cursor()
         sql = """
-        SELECT 
-            userid,
-            first_name,
-            last_name,
-            email,
-            admin, 
-            agent
-        FROM 
-            t_hbb_user
-        WHERE 
-            userid = %s
+        SELECT userid, first_name, last_name, email, admin, agent
+        FROM t_hbb_user
+        WHERE userid = %s
         """
-
-        # Execute the SQL query with the user_id parameter
         cursor.execute(sql, (user_id,))
         user = cursor.fetchone()
 
@@ -1545,11 +1545,11 @@ def check_login():
                 "email": None
             }), 200
 
-        # Extract fields from the query result
+        # Extract user data
         columns = [column[0] for column in cursor.description]
         user_data = dict(zip(columns, user))
 
-        # ✅ FIX: Ensure `isAdmin` and `isAgent` are proper booleans
+        # ✅ Properly format the response
         response = {
             "isLoggedIn": True,
             "isAdmin": bool(user_data.get('admin')),
@@ -1563,7 +1563,7 @@ def check_login():
         return jsonify(response), 200
 
     except Exception as e:
-        print(f"[ERROR] check_login: {e}")
+        print(f"❌ [ERROR] check_login: {e}")
         return jsonify({"error": str(e)}), 500
 
     finally:
